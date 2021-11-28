@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591793853553",
+    "project_id": "calmin-695a1",
+    "storage_bucket": "calmin-695a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591793853553:android:f7792a5f7b7a986577b7d0",
+        "android_client_info": {
+          "package_name": "com.omellete.calmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591793853553-0hpvv6fkgdbg616a3me864jv0u8ljuk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAieDXxrE5Od_2ruw4kLYhalPlUFgx6h2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591793853553-0hpvv6fkgdbg616a3me864jv0u8ljuk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
