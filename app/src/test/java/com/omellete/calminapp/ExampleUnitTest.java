@@ -1,4 +1,4 @@
-package com.omellete.calmin;
+package com.omellete.calminapp;
 
 import org.junit.Test;
 

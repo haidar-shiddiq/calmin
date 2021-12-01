@@ -3,13 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/drawable/button_background.xml" value="0.2703125" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/drawable/button_black.xml" value="0.2703125" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/drawable/edittext_background.xml" value="0.2703125" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/layout/activity_main.xml" value="0.536" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/calmin/app/src/main/res/layout/activity_start.xml" value="0.13020833333333334" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_group_sharing.xml" value="0.14130434782608695" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_register.xml" value="0.264" />
       </map>
     </option>
   </component>

@@ -1,4 +1,4 @@
-package com.omellete.calmin;
+package com.omellete.calminapp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.omellete.calmin", appContext.getPackageName());
+        assertEquals("com.omellete.calminapp", appContext.getPackageName());
     }
 }

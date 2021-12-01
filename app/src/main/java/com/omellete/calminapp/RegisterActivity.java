@@ -1,6 +1,7 @@
-package com.omellete.calmin;
+package com.omellete.calminapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -8,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.ProgressBar;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.omellete.calmin.databinding.ActivityRegisterBinding;
+import com.omellete.calminapp.databinding.ActivityRegisterBinding;
 
 import java.util.HashMap;
 
@@ -34,6 +35,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         auth = FirebaseAuth.getInstance();
 
@@ -51,13 +54,13 @@ public class RegisterActivity extends AppCompatActivity {
                 pd.setMessage("Mohon Tunggu Sebentar...");
                 pd.show();
 
-                String username = binding.username.getText().toString();
-                String email = binding.email.getText().toString();
-                String password = binding.password.getText().toString();
-                String confirmPw = binding.confirmPassword.getText().toString();
+                String username = binding.username.getEditText().getText().toString();
+                String email = binding.email.getEditText().getText().toString();
+                String password = binding.password.getEditText().getText().toString();
+                String confirmPw = binding.confirmPassword.getEditText().getText().toString();
 
                 if (TextUtils.isEmpty(username)||TextUtils.isEmpty(email)||TextUtils.isEmpty(password)
-                ||TextUtils.isEmpty(confirmPw)){
+                        ||TextUtils.isEmpty(confirmPw)){
                     Toast.makeText(RegisterActivity.this, "Mohon isi semua field", Toast.LENGTH_SHORT).show();
                     pd.dismiss();
                 }else if(password.length()<6){
@@ -93,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         pd.dismiss();
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(RegisterActivity.this, GroupSharingActivity.class);
                                         intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent. FLAG_ACTIVITY_NEW_TASK) ;
                                         startActivity(intent);
                                     }
@@ -101,7 +104,7 @@ public class RegisterActivity extends AppCompatActivity {
                             });
                         }else{
                             pd.dismiss();
-                            Toast.makeText(RegisterActivity.this, "Maaf, anda tidak bisa register dengan username ini", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Maaf, anda tidak bisa register dengan username atau email ini", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

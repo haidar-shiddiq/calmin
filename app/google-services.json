@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "591793853553",
-    "project_id": "calmin-695a1",
-    "storage_bucket": "calmin-695a1.appspot.com"
+    "project_number": "370686543570",
+    "project_id": "calminapp-89bd8",
+    "storage_bucket": "calminapp-89bd8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:591793853553:android:f7792a5f7b7a986577b7d0",
+        "mobilesdk_app_id": "1:370686543570:android:a226c76be105f2e9944f0b",
         "android_client_info": {
-          "package_name": "com.omellete.calmin"
+          "package_name": "com.omellete.calminapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "591793853553-0hpvv6fkgdbg616a3me864jv0u8ljuk6.apps.googleusercontent.com",
+          "client_id": "370686543570-mqvf7o91pna0emrvo4tg4basn0fd43ud.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAieDXxrE5Od_2ruw4kLYhalPlUFgx6h2A"
+          "current_key": "AIzaSyB3TzvUCCSz3h_DLznuX1gsTVc3KRNyJ70"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "591793853553-0hpvv6fkgdbg616a3me864jv0u8ljuk6.apps.googleusercontent.com",
+              "client_id": "370686543570-mqvf7o91pna0emrvo4tg4basn0fd43ud.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,6 +1,7 @@
-package com.omellete.calmin;
+package com.omellete.calminapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,11 +18,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.omellete.calmin.databinding.ActivityLoginBinding;
-import com.google.firebase.database.DatabaseReference;
-import com.omellete.calmin.databinding.ActivityRegisterBinding;
+import com.omellete.calminapp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -33,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         auth = FirebaseAuth.getInstance();
 
@@ -50,8 +53,8 @@ public class LoginActivity extends AppCompatActivity {
                 pd.setMessage("Mohon Tunggu Sebentar...");
                 pd.show();
 
-                String email = binding.emailLogin.getText().toString();
-                String password = binding.password.getText().toString();
+                String email = binding.emailLogin.getEditText().getText().toString();
+                String password = binding.password.getEditText().getText().toString();
                 if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)){
                     Toast.makeText(LoginActivity.this, "Mohon isi semua field", Toast.LENGTH_SHORT).show();
                 }else{
@@ -60,23 +63,23 @@ public class LoginActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful ()){
-                                            reference = FirebaseDatabase.getInstance().getReference().child("Users")
-                                            .child(auth.getCurrentUser().getUid());
+                                        reference = FirebaseDatabase.getInstance().getReference().child("Users")
+                                                .child(auth.getCurrentUser().getUid());
 
-                                            reference.addValueEventListener(new ValueEventListener() {
-                                                @Override
-                                                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                    pd.dismiss ();
-                                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                                    intent.addFlags (Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) ;
-                                                    startActivity(intent);
-                                                    finish ();
-                                                }
-                                                @Override
-                                                public void onCancelled(@NonNull DatabaseError error) {
-                                                    pd.dismiss();
-                                                }
-                                            });
+                                        reference.addValueEventListener(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                pd.dismiss ();
+                                                Intent intent = new Intent(LoginActivity.this, GroupSharingActivity.class);
+                                                intent.addFlags (Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) ;
+                                                startActivity(intent);
+                                                finish ();
+                                            }
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+                                                pd.dismiss();
+                                            }
+                                        });
 
                                     }else{
                                         pd.dismiss();
