@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_chatt"
     tools:context=".GroupSharingActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -17,34 +18,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
         android:background="#AADE87"
+        android:paddingStart="5dp"
         android:paddingTop="5dp"
-        android:paddingEnd="5dp"
-        android:paddingStart="5dp">
+        android:paddingEnd="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
             <EditText
+                android:id="@+id/etMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etMessage"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                android:textColor="#615355"
                 android:hint="masukkan pesan"
-                android:textStyle="italic">
-
-            </EditText>
+                android:textColor="#615355"
+                android:textColorHint="#80615355" />
 
             <ImageButton
+                android:id="@+id/btnSend"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:background="#AADE87"
-                android:id="@+id/btnSend"
-                android:src="@drawable/ic_send"
-                />
+                android:layout_marginEnd="5dp"
+                android:background="#008CBD68"
+                android:src="@drawable/ic_send" />
 
         </LinearLayout>
 

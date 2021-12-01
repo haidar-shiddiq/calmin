@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_group_sharing.xml" value="0.505699481865285" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/bg_chat.xml" value="3.2" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/green_app.xml" value="0.14635416666666667" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/ic_delete.xml" value="0.2703125" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/ic_send.xml" value="0.2703125" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_group_sharing.xml" value="0.6" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/item_message.xml" value="0.4" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/item_message.xml" value="0.37796208530805686" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
       </map>
     </option>

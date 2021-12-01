@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.omellete.calminapp.databinding.ActivityRegisterBinding;
+import com.omellete.calminapp.model.User;
 
 import java.util.HashMap;
 
@@ -84,6 +85,10 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful ()) {
                             FirebaseUser firebaseUser = auth.getCurrentUser();
                             String userid = firebaseUser.getUid();
+                            User u = new User();
+                            u.setName(username);
+                            u.setuid(userid);
+                            u.setEmail(email);
                             reference = FirebaseDatabase.getInstance().getReference().child("Users").child(userid);
 
                             HashMap<String, Object> hashMap = new HashMap<>();

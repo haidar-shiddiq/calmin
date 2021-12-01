@@ -1,16 +1,21 @@
 package com.omellete.calminapp.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.omellete.calminapp.R;
+import com.omellete.calminapp.model.AllMethods;
 import com.omellete.calminapp.model.Message;
 
 import java.util.List;
@@ -30,11 +35,22 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     @NonNull
     @Override
     public MessageAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.item_message,parent,false);
+        return new MessageAdapterViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MessageAdapterViewHolder holder, int position) {
+        Message message = messages.get(position);
+
+        if (message.getName().equals(AllMethods.name)){
+            holder.tvTittle.setText("You: "+message.getMessage());
+            holder.tvTittle.setGravity(Gravity.START);
+            holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChat));
+        }else{
+            holder.tvTittle.setText(message.getName() +": "+ message.getMessage());
+            holder.ibDelete.setVisibility(View.GONE);
+        }
 
     }
 
@@ -46,12 +62,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     public class MessageAdapterViewHolder extends RecyclerView.ViewHolder{
         TextView tvTittle;
         ImageButton ibDelete;
-
+        CardView cardView;
 
         public MessageAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTittle = itemView.findViewById(R.id.tvTittle);
             ibDelete = itemView.findViewById(R.id.btnDel);
+            cardView = itemView.findViewById(R.id.cardView);
 
             ibDelete.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = binding.emailLogin.getEditText().getText().toString();
                 String password = binding.password.getEditText().getText().toString();
                 if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)){
+                    pd.dismiss();
                     Toast.makeText(LoginActivity.this, "Mohon isi semua field", Toast.LENGTH_SHORT).show();
                 }else{
                     auth.signInWithEmailAndPassword(email,password)

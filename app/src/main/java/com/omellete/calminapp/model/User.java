@@ -31,11 +31,12 @@ public class User {
         this.email = email;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
                 "uid='" + uid + '\'' +
-                ", name=!" + name + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

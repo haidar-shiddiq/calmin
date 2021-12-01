@@ -11,7 +11,6 @@ public class Message {
     public Message(String message, String name) {
         this.message = message;
         this.name = name;
-        this.key = key;
     }
 
     public String getMessage() {
