@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="75dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="60dp"
             android:layout_marginBottom="5dp"
             android:src="@drawable/calmin"
             app:layout_constraintBottom_toTopOf="@+id/username"
@@ -29,7 +29,11 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            app:hintTextAppearance="@style/HintText"
+            android:hint="Username"
+            app:hintTextColor="#52ADA2"
+            app:boxStrokeColor="#52ADA2"
+            android:textColorHint="#CB2E2E2E"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintBottom_toTopOf="@+id/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -37,8 +41,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="#615355"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -48,18 +52,23 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            app:hintTextAppearance="@style/HintText"
+            android:hint="Password"
+            app:hintTextColor="#52ADA2"
+            app:boxStrokeColor="#52ADA2"
+            android:textColorHint="#CB2E2E2E"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:passwordToggleEnabled="true">
+            app:endIconMode="password_toggle"
+            app:endIconTint="#CB2E2E2E">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password Visibility Toggle"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#615355"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +79,11 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            app:hintTextAppearance="@style/HintText"
+            android:hint="Email Address"
+            app:hintTextColor="#52ADA2"
+            app:boxStrokeColor="#52ADA2"
+            android:textColorHint="#CB2E2E2E"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintBottom_toTopOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -78,8 +91,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email Address"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="#615355"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -90,17 +103,22 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
-            app:hintTextAppearance="@style/HintText"
+            android:hint="Confirm Password"
+            app:hintTextColor="#52ADA2"
+            app:boxStrokeColor="#52ADA2"
+            android:textColorHint="#CB2E2E2E"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#CB2E2E2E"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password"
-            app:passwordToggleEnabled="true">
+            app:layout_constraintTop_toBottomOf="@+id/password">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Confirm Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="#615355"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,14 +147,15 @@
                 android:id="@+id/textRegister1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sudah punya akun?" />
+                android:text="Sudah punya akun?"
+                android:textColor="#CB2E2E2E"/>
 
             <TextView
                 android:id="@+id/textLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Login"
-                android:textColor="@color/purple_700"
+                android:textColor="#216A61"
                 android:textStyle="bold" />
 
         </LinearLayout>
