@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalminApp">
         <activity
+            android:name=".CalmCornerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SelfImproveActivity"
+            android:exported="true" />
+        <activity
             android:name=".LandingActivity"
             android:exported="true" />
         <activity

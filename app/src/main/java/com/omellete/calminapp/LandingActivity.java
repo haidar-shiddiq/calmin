@@ -5,13 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.omellete.calminapp.fragment.AboutFragment;
 import com.omellete.calminapp.fragment.MenuFragment;
-import com.omellete.calminapp.fragment.ModuleFragment;
+import com.omellete.calminapp.fragment.ProfileFragment;
 import com.omellete.calminapp.fragment.SupportFragment;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
@@ -25,6 +31,7 @@ public class LandingActivity extends AppCompatActivity {
     Class fragmentClass;
     public static Fragment fragment;
     FirebaseAuth firebaseAuth;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +40,17 @@ public class LandingActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        dialog = new Dialog(this);
+
         firebaseAuth = FirebaseAuth.getInstance();
-
         sNavigationDrawer = findViewById(R.id.navDrawer);
-
         List<MenuItem> menuItems = new ArrayList<>();
 
         //Use the MenuItem given by this library and not the default one.
         //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
 
         menuItems.add(new MenuItem("Menu", R.color.greenTheme));
-        menuItems.add(new MenuItem("Module", R.color.greenTheme));
+        menuItems.add(new MenuItem("Profile", R.color.greenTheme));
         menuItems.add(new MenuItem("About", R.color.greenTheme));
         menuItems.add(new MenuItem("Support",R.color.greenTheme));
         menuItems.add(new MenuItem("Logout",R.color.greenTheme));
@@ -77,7 +84,7 @@ public class LandingActivity extends AppCompatActivity {
                         break;
                     }
                     case 1:{
-                        fragmentClass = ModuleFragment.class;
+                        fragmentClass = ProfileFragment.class;
                         break;
                     }
                     case 2:{
@@ -89,9 +96,10 @@ public class LandingActivity extends AppCompatActivity {
                         break;
                     }
                     case 4 :{
-                        firebaseAuth.signOut();
-                        finish();
-                        startActivity(new Intent(LandingActivity.this,LoginActivity.class));
+                        logoutDialog();
+//                        firebaseAuth.signOut();
+//                        finish();
+//                        startActivity(new Intent(LandingActivity.this,LoginActivity.class));
                         break;
                     }
 
@@ -140,5 +148,30 @@ public class LandingActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void logoutDialog() {
+        dialog.setContentView(R.layout.logout_alert);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button btnLogout = dialog.findViewById(R.id.btnLogout);
+        ImageButton btnClose = dialog.findViewById(R.id.btnCLose);
+        dialog.show();
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                finish();
+                startActivity(getIntent());
+            }
+        });
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(LandingActivity.this,LoginActivity.class));
+            }
+        });
     }
 }
