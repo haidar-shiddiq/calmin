@@ -30,7 +30,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.omellete.calminapp.adapter.MessageAdapter;
 import com.omellete.calminapp.databinding.ActivityGroupSharingBinding;
-import com.omellete.calminapp.databinding.ActivityLoginBinding;
 import com.omellete.calminapp.model.AllMethods;
 import com.omellete.calminapp.model.Message;
 import com.omellete.calminapp.model.User;
@@ -57,8 +56,11 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
         setTitle("Public Chat");
         ActionBar actionBar;
         actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#F78CBD68"));
+                = new ColorDrawable(Color.parseColor("#2196F3"));
         actionBar.setBackgroundDrawable(colorDrawable);
 
         init();
@@ -204,17 +206,11 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.menuLogout) {
-            firebaseAuth.signOut();
-            finish();
-            startActivity(new Intent(GroupSharingActivity.this,MainActivity.class));
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -222,7 +218,6 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finishAffinity();
-        finish();
+        startActivity(new Intent(GroupSharingActivity.this, LandingActivity.class));
     }
 }

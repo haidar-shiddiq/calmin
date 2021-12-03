@@ -25,18 +25,29 @@
             android:paddingStart="5dp">
 
             <TextView
-                android:id="@+id/tvTittle"
+                android:id="@+id/senderName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:text="sender"
+                android:textStyle="bold"
+                android:textColor="#AADE87"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:text="Pesan"
                 android:textColor="#C5C5C5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btnDel"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/senderName" />
 
             <ImageButton
                 android:id="@+id/btnDel"

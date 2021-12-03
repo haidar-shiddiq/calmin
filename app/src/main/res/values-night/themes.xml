@@ -3,7 +3,7 @@
     <style name="Theme.CalminApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#52ADA2</item>
-        <item name="colorPrimaryVariant">#AADE87</item>
+        <item name="colorPrimaryVariant">#2196F3</item>
         <item name="colorOnPrimary">#F7F8F3</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#8C533D</item>

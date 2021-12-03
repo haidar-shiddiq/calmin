@@ -44,12 +44,15 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
         Message message = messages.get(position);
 
         if (message.getName().equals(AllMethods.name)){
-            holder.tvTittle.setText("You: "+message.getMessage());
+            holder.sender.setText("You");
+            holder.tvTittle.setText(message.getMessage());
             holder.tvTittle.setGravity(Gravity.START);
+            holder.sender.setTextColor(context.getResources().getColorStateList(R.color.myChatTextName));
             holder.tvTittle.setTextColor(context.getResources().getColorStateList(R.color.myChatText));
             holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChat));
         }else{
-            holder.tvTittle.setText(message.getName() +": "+ message.getMessage());
+            holder.sender.setText(message.getName());
+            holder.tvTittle.setText(message.getMessage());
             holder.ibDelete.setVisibility(View.GONE);
         }
 
@@ -61,7 +64,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     }
 
     public class MessageAdapterViewHolder extends RecyclerView.ViewHolder{
-        TextView tvTittle;
+        TextView tvTittle,sender;
         ImageButton ibDelete;
         CardView cardView;
 
@@ -70,6 +73,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
             tvTittle = itemView.findViewById(R.id.tvTittle);
             ibDelete = itemView.findViewById(R.id.btnDel);
             cardView = itemView.findViewById(R.id.cardView);
+            sender = itemView.findViewById(R.id.senderName);
 
             ibDelete.setOnClickListener(new View.OnClickListener() {
                 @Override

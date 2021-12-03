@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         // redirect if user is not null
         if (firebaseUser != null) {
-            startActivity(new Intent(MainActivity.this, GroupSharingActivity.class));
+            startActivity(new Intent(MainActivity.this, LandingActivity.class));
             finish();
         }
     }
