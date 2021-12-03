@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CalminApp</string>
+    <string name="email">Input email</string>
+    <string name="password">Input Password</string>
+    <string name="login">Log In</string>
+    <string name="register">Belum punya akun? Register</string>
 </resources>
