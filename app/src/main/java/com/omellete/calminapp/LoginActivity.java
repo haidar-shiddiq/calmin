@@ -4,12 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     ActivityLoginBinding binding;
     FirebaseAuth auth;
     DatabaseReference reference;
+    Dialog dialogE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +42,18 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+        dialogE = new Dialog(this);
+
         auth = FirebaseAuth.getInstance();
 
-        binding.textRegister.setOnClickListener(new View.OnClickListener(){
+        binding.forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,ResetPasswordActivity.class));
+            }
+        });
+
+        binding.btnRegis.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
@@ -91,6 +105,35 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    private void exitDialog() {
+        dialogE.setContentView(R.layout.alert_exit);
+        dialogE.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button btnExit = dialogE.findViewById(R.id.btnExit);
+        ImageButton btnClose = dialogE.findViewById(R.id.btnCLoseE);
+        dialogE.show();
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogE.dismiss();
+            }
+        });
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogE.dismiss();
+                finishAffinity();
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        exitDialog();
 
     }
 }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalminApp">
         <activity
+            android:name=".ResetPasswordActivity"
+            android:exported="true" />
+        <activity
             android:name=".CalmCornerActivity"
             android:exported="true" />
         <activity

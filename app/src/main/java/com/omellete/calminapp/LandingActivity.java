@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +32,7 @@ public class LandingActivity extends AppCompatActivity {
     Class fragmentClass;
     public static Fragment fragment;
     FirebaseAuth firebaseAuth;
-    Dialog dialog;
+    Dialog dialog,dialogE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class LandingActivity extends AppCompatActivity {
         actionBar.hide();
 
         dialog = new Dialog(this);
+        dialogE = new Dialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
         sNavigationDrawer = findViewById(R.id.navDrawer);
@@ -150,8 +152,15 @@ public class LandingActivity extends AppCompatActivity {
 
     }
 
+    public void composeEmail() {
+        Intent mailIntent = new Intent(Intent.ACTION_VIEW);
+        Uri data = Uri.parse("mailto:?subject=" + "Calm.in Support Request"+ "&body=" + "" + "&to=" + "cs.calmin@gmmail.com");
+        mailIntent.setData(data);
+        startActivity(Intent.createChooser(mailIntent, "Send mail..."));
+    }
+
     private void logoutDialog() {
-        dialog.setContentView(R.layout.logout_alert);
+        dialog.setContentView(R.layout.alert_logout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         Button btnLogout = dialog.findViewById(R.id.btnLogout);
         ImageButton btnClose = dialog.findViewById(R.id.btnCLose);
@@ -168,10 +177,39 @@ public class LandingActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dialog.dismiss();
                 firebaseAuth.signOut();
                 finish();
                 startActivity(new Intent(LandingActivity.this,LoginActivity.class));
             }
         });
+    }
+
+    private void exitDialog() {
+        dialogE.setContentView(R.layout.alert_exit);
+        dialogE.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        Button btnExit = dialogE.findViewById(R.id.btnExit);
+        ImageButton btnClose = dialogE.findViewById(R.id.btnCLoseE);
+        dialogE.show();
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogE.dismiss();
+            }
+        });
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogE.dismiss();
+                finishAffinity();
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        exitDialog();
     }
 }

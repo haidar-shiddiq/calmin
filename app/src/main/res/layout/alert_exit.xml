@@ -6,7 +6,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="320dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,14 +38,14 @@
                 android:id="@+id/imageView4"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_logout"
+                android:src="@drawable/ic_exit_app"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView3"
                 app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
             <ImageButton
-                android:id="@+id/btnCLose"
+                android:id="@+id/btnCLoseE"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="5dp"
@@ -60,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="ANDA YAKIN AKAN LOGOUT?"
+                android:text="KELUAR APLIKASI?"
                 android:textAlignment="center"
                 android:textColor="#FF0000"
                 android:textSize="24sp"
@@ -69,30 +69,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:alpha="0.5"
-                android:text="Anda harus login lagi untuk menikmati semua fitur dari aplikasi ini"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnLogout"
+                android:id="@+id/btnExit"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="LOGOUT"
-                android:textColor="#FFFFFF"
                 android:background="@drawable/button_bg_red"
+                android:text="Keluar"
+                android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

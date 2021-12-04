@@ -32,16 +32,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLogin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:hint="Email Address"
-            app:hintTextColor="#52ADA2"
-            app:boxStrokeColor="#52ADA2"
-            android:textColorHint="#CB2E2E2E"
             android:layout_marginBottom="5dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Email Address"
+            android:textColorHint="#CB2E2E2E"
+            app:boxStrokeColor="#52ADA2"
+            app:hintTextColor="#52ADA2"
             app:layout_constraintBottom_toTopOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -49,34 +49,34 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#615355"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="#615355" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:hint="Password"
-            app:hintTextColor="#52ADA2"
-            app:boxStrokeColor="#52ADA2"
             android:textColorHint="#CB2E2E2E"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="#52ADA2"
+            app:endIconMode="password_toggle"
+            app:endIconTint="#CB2E2E2E"
+            app:hintTextColor="#52ADA2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:endIconMode="password_toggle"
-            app:endIconTint="#CB2E2E2E">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:textColor="#615355"/>
+                android:textColor="#615355" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,30 +93,63 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Belum punya akun?"
+            android:textColor="#CB2E2E2E"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginButton">
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-            <TextView
-                android:id="@+id/textLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Belum punya akun?"
-                android:textColor="#CB2E2E2E"/>
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lupa Password?"
+            android:textColor="#216A61"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-            <TextView
-                android:id="@+id/textRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" Register"
-                android:textColor="#216A61"
-                android:textStyle="bold" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:background="#52ADA2"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textLogin"
+            app:layout_constraintEnd_toStartOf="@+id/textLogin"
+            app:layout_constraintTop_toTopOf="@+id/textLogin">
 
-        </LinearLayout>
+        </View>
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:background="#52ADA2"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textLogin"
+            app:layout_constraintStart_toEndOf="@+id/textLogin"
+            app:layout_constraintTop_toTopOf="@+id/textLogin">
+        </View>
+
+        <Button
+            android:id="@+id/btn_regis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/button_background"
+            android:text="Register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLogin" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

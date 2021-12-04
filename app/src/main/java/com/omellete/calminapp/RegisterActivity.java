@@ -41,7 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        binding.textLogin.setOnClickListener(new View.OnClickListener(){
+        binding.btnLoginn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                             });
                         }else{
                             pd.dismiss();
-                            Toast.makeText(RegisterActivity.this, "Maaf, anda tidak bisa register dengan username atau email ini", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "Maaf, kamu tidak bisa register dengan username atau email ini", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

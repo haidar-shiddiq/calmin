@@ -2,12 +2,6 @@ package com.omellete.calminapp;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,10 +9,15 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +36,7 @@ import com.omellete.calminapp.model.User;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GroupSharingActivity extends AppCompatActivity implements View.OnClickListener{
+public class GroupSharingActivity extends AppCompatActivity implements View.OnClickListener {
 
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
@@ -67,7 +66,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
 
     }
 
-    private void init (){
+    private void init() {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         u = new User();
@@ -78,11 +77,11 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onClick(View view) {
-        if (!TextUtils.isEmpty(binding.etMessage.getText ().toString())) {
+        if (!TextUtils.isEmpty(binding.etMessage.getText().toString())) {
             Message message = new Message(binding.etMessage.getText().toString(), userDname);
-            binding.etMessage. setText ("");
+            binding.etMessage.setText("");
             reference.push().setValue(message);
-        }else{
+        } else {
             Toast.makeText(getApplicationContext(), "Kamu tidak bisa mengirim pesan kosong", Toast.LENGTH_SHORT).show();
         }
     }
@@ -111,16 +110,17 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {}
+            public void onCancelled(DatabaseError databaseError) {
+            }
         });
 
 
         firebaseDatabase.getReference("Users").child(currentUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                u= snapshot.getValue (User.class);
+                u = snapshot.getValue(User.class);
                 u.setuid(currentUser.getUid());
-                AllMethods.name = userDname ;
+                AllMethods.name = userDname;
             }
 
             @Override
@@ -147,10 +147,10 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
 
                 List<Message> newMessage = new ArrayList<Message>();
 
-                for (Message m: messages){
-                    if(m.getKey().equals(message.getKey())){
+                for (Message m : messages) {
+                    if (m.getKey().equals(message.getKey())) {
                         newMessage.add(message);
-                    }else{
+                    } else {
                         newMessage.add(m);
                     }
                 }
@@ -168,8 +168,8 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
 
                 List<Message> newMessage = new ArrayList<Message>();
 
-                for(Message m: messages){
-                    if (!m.getKey().equals(message.getKey())){
+                for (Message m : messages) {
+                    if (!m.getKey().equals(message.getKey())) {
                         newMessage.add(m);
                     }
                 }
