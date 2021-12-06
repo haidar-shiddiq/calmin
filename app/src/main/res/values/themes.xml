@@ -15,6 +15,11 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:statusBarColor">@color/myChatText</item>
+    </style>
+
     <style name="splashBg" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">#AADE87</item>
     </style>

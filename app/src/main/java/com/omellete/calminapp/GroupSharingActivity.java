@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -61,6 +62,14 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#2196F3"));
         actionBar.setBackgroundDrawable(colorDrawable);
+
+        binding.scrollTop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.rvMessage.scrollToPosition(0);
+                binding.scrollTop.hide();
+            }
+        });
 
         init();
 
@@ -199,9 +208,22 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     }
 
     private void displayMessages(List<Message> messages) {
-        binding.rvMessage.setLayoutManager(new LinearLayoutManager(GroupSharingActivity.this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(GroupSharingActivity.this);
+        binding.rvMessage.setLayoutManager(linearLayoutManager);
         adapter = new MessageAdapter(GroupSharingActivity.this, messages, reference);
         binding.rvMessage.setAdapter(adapter);
+        binding.rvMessage.scrollToPosition(adapter.getItemCount()-1);
+
+        binding.rvMessage.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if (dy > 0) {
+                    binding.scrollTop.show();
+                } else if (dy < 0) {
+                    binding.scrollTop.hide();
+                }
+            }
+        });
 
     }
 

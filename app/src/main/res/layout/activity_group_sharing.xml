@@ -17,6 +17,20 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item_message" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="40dp"
+        android:id="@+id/scrollTop"
+        android:layout_height="40dp"
+        app:fabCustomSize="40dp"
+        android:backgroundTint="#BFAADE87"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:tint="@null"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_double_arrow_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvMessage" />
+
         <RelativeLayout
             android:id="@+id/relativeLayout"
             android:layout_width="match_parent"

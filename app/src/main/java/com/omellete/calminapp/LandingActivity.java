@@ -52,8 +52,8 @@ public class LandingActivity extends AppCompatActivity {
         //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
 
         menuItems.add(new MenuItem("Menu", R.color.greenTheme));
-        menuItems.add(new MenuItem("Profile", R.color.greenTheme));
-        menuItems.add(new MenuItem("About", R.color.greenTheme));
+        menuItems.add(new MenuItem("Profil", R.color.greenTheme));
+        menuItems.add(new MenuItem("Tentang", R.color.greenTheme));
         menuItems.add(new MenuItem("Support",R.color.greenTheme));
         menuItems.add(new MenuItem("Logout",R.color.greenTheme));
 
