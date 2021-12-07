@@ -18,6 +18,8 @@
         <activity
             android:name=".SelfImproveActivity"
             android:exported="true" />
+        <activity android:name=".DetailArtikelActivity"
+            android:exported="true"/>
         <activity
             android:name=".LandingActivity"
             android:exported="true" />
@@ -32,8 +34,8 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

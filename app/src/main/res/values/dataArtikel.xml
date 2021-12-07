@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="judul">
+        <item>Artikel nomor 1</item>
+    </string-array>
+
+    <string-array name="penulis">
+        <item>Penulis nomor 1</item>
+    </string-array>
+
+    <string-array name="isiArtikel">
+        <item>Artikel nomor 1</item>
+    </string-array>
+
+    <string-array name="gambarArtikel">
+        <item>@drawable/stressno1</item>
+    </string-array>
+
+    <string-array name="Judul">
+        <item>Artikel nomor 1</item>
+    </string-array>
+</resources>
