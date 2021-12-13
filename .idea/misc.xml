@@ -25,10 +25,11 @@
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/radial_blue_green.xml" value="0.264" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/red_bg.xml" value="0.2703125" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/drawable/splash_background.xml" value="0.4" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_calm_corner.xml" value="0.16757246376811594" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_group_sharing.xml" value="1.6" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_landing.xml" value="0.24010416666666667" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_login.xml" value="0.4" />
-        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_main.xml" value="0.3949447077409163" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_register.xml" value="0.4" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/activity_reset_password.xml" value="0.4" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/alert_exit.xml" value="0.4" />
@@ -42,6 +43,7 @@
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/fragment_public_chat.xml" value="0.25416666666666665" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/fragment_support.xml" value="0.4" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/item_message.xml" value="0.6" />
+        <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/item_music.xml" value="1.6" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/logout_alert.xml" value="0.4" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/layout/splash_background.xml" value="0.264" />
         <entry key="..\:/KULON/MBKM SIB DICODING/android project/CalminApp/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
