@@ -9,9 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.bumptech.glide.Glide;
 import com.omellete.calminapp.R;
 import com.omellete.calminapp.model.Music;
 
@@ -48,13 +46,13 @@ public class MusicAdapter extends BaseAdapter {
 
     private class ViewHolder {
         TextView txtName, txtSinger;
-        ImageView ivPlay, ivStop;
+        ImageView ivPlay, ivStop, imgBg, ivMusic;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final ViewHolder viewHolder;
-        if(convertView == null){
+        if (convertView == null) {
             viewHolder = new ViewHolder();
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -63,7 +61,10 @@ public class MusicAdapter extends BaseAdapter {
             viewHolder.txtSinger = (TextView) convertView.findViewById(R.id.txtSinger);
             viewHolder.ivPlay = (ImageView) convertView.findViewById(R.id.ivPlay);
             viewHolder.ivStop = (ImageView) convertView.findViewById(R.id.ivStop);
+            viewHolder.imgBg = (ImageView) convertView.findViewById(R.id.cardBackground);
+            viewHolder.ivMusic = (ImageView) convertView.findViewById(R.id.ivMusic);
             viewHolder.ivStop.setVisibility(View.GONE);
+
 
             convertView.setTag(viewHolder);
         } else {
@@ -74,21 +75,29 @@ public class MusicAdapter extends BaseAdapter {
 
         viewHolder.txtName.setText(music.getName());
         viewHolder.txtSinger.setText(music.getSinger());
+        Glide.with(viewHolder.imgBg.getContext())
+                .load(music.getCardBackground())
+                .into(viewHolder.imgBg);
+        Glide.with(viewHolder.ivMusic.getContext())
+                .load(music.getMusicLogo())
+                .into(viewHolder.ivMusic);
 
         // play music
         viewHolder.ivPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(flag){
+                if (flag) {
                     mediaPlayer = MediaPlayer.create(context, music.getSong());
+                    mediaPlayer.setLooping(true);
                     flag = false;
                 }
-                if(mediaPlayer.isPlaying()) {
+                if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
                     viewHolder.ivPlay.setImageResource(R.drawable.ic_play);
                 } else {
                     mediaPlayer.start();
-                    viewHolder.ivPlay.setImageResource(R.drawable.ic_pasue);
+
+                    viewHolder.ivPlay.setImageResource(R.drawable.ic_pause);
                     viewHolder.ivStop.setVisibility(View.VISIBLE);
                 }
             }
@@ -98,7 +107,7 @@ public class MusicAdapter extends BaseAdapter {
         viewHolder.ivStop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!flag) {
+                if (!flag) {
                     mediaPlayer.stop();
                     mediaPlayer.release();
                     viewHolder.ivStop.setVisibility(View.GONE);
