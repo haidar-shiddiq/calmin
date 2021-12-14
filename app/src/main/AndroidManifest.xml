@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalminApp">
         <activity
+            android:name=".SupportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".ResetPasswordActivity"
             android:exported="true" />
         <activity
@@ -18,8 +24,9 @@
         <activity
             android:name=".SelfImproveActivity"
             android:exported="true" />
-        <activity android:name=".DetailArtikelActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".DetailArtikelActivity"
+            android:exported="true" />
         <activity
             android:name=".LandingActivity"
             android:exported="true" />

@@ -46,14 +46,14 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     User u;
     List<Message> messages;
     ActivityGroupSharingBinding binding;
-    String userDname;
+    public String userDname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityGroupSharingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setTitle("Public Chat");
+        setTitle("Ruang Cakap");
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         if (actionBar != null) {

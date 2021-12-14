@@ -39,6 +39,12 @@ public class MusicAdapter extends BaseAdapter {
         return null;
     }
 
+    public void stopPlayer() {
+        if (!flag){
+            mediaPlayer.stop();
+        }
+    }
+
     @Override
     public long getItemId(int position) {
         return 0;

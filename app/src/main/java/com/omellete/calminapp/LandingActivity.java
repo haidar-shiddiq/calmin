@@ -52,9 +52,7 @@ public class LandingActivity extends AppCompatActivity {
         //First parameter is the title of the menu item and then the second parameter is the image which will be the background of the menu item.
 
         menuItems.add(new MenuItem("Menu", R.color.greenTheme));
-        menuItems.add(new MenuItem("Profil", R.color.greenTheme));
         menuItems.add(new MenuItem("Tentang", R.color.greenTheme));
-        menuItems.add(new MenuItem("Support",R.color.greenTheme));
         menuItems.add(new MenuItem("Logout",R.color.greenTheme));
 
         //then add them to navigation drawer
@@ -86,22 +84,11 @@ public class LandingActivity extends AppCompatActivity {
                         break;
                     }
                     case 1:{
-                        fragmentClass = ProfileFragment.class;
-                        break;
-                    }
-                    case 2:{
                         fragmentClass = AboutFragment.class;
                         break;
                     }
-                    case 3:{
-                        fragmentClass = SupportFragment.class;
-                        break;
-                    }
-                    case 4 :{
+                    case 2:{
                         logoutDialog();
-//                        firebaseAuth.signOut();
-//                        finish();
-//                        startActivity(new Intent(LandingActivity.this,LoginActivity.class));
                         break;
                     }
 
