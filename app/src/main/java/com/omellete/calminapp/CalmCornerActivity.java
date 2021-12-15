@@ -35,6 +35,7 @@ public class CalmCornerActivity extends AppCompatActivity {
         ColorDrawable colorDrawable
                 = new ColorDrawable(Color.parseColor("#2196F3"));
         actionBar.setBackgroundDrawable(colorDrawable);
+        setTitle("Zona Tenang");
 
         songList = findViewById(R.id.songList);
         arrayList = new ArrayList<>();

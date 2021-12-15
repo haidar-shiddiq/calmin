@@ -18,8 +18,6 @@ import android.widget.ImageButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.omellete.calminapp.fragment.AboutFragment;
 import com.omellete.calminapp.fragment.MenuFragment;
-import com.omellete.calminapp.fragment.ProfileFragment;
-import com.omellete.calminapp.fragment.SupportFragment;
 import com.shrikanthravi.customnavigationdrawer2.data.MenuItem;
 import com.shrikanthravi.customnavigationdrawer2.widget.SNavigationDrawer;
 

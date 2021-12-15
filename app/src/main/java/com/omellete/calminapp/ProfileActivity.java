@@ -2,17 +2,16 @@ package com.omellete.calminapp;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,13 +20,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.omellete.calminapp.databinding.ActivityGroupSharingBinding;
 import com.omellete.calminapp.databinding.ActivityProfileBinding;
 
 public class ProfileActivity extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
-    String name,uid;
+    String name, uid;
     FirebaseDatabase firebaseDatabase;
     ActivityProfileBinding binding;
 
@@ -47,9 +45,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         final FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        uid=currentUser.getUid();
-//        GroupSharingActivity group = new GroupSharingActivity();
-//        name = group.showUserDname();
+        uid = currentUser.getUid();
         firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference ref = firebaseDatabase.getReference();
         String userKey = uid;

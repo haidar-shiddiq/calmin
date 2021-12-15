@@ -19,7 +19,9 @@
         android:id="@+id/profileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:text="loading name.."
+        android:textSize="20sp"
+        android:textColor="@color/myChatText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -30,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="uid"
+        android:textColor="#B80000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileName" />
@@ -40,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="TextView"
+        android:textColor="@color/myChatText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileUid" />

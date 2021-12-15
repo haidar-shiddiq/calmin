@@ -1,9 +1,5 @@
 package com.omellete.calminapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,6 +11,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -49,14 +49,14 @@ public class LoginActivity extends AppCompatActivity {
         binding.forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,ResetPasswordActivity.class));
+                startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
             }
         });
 
-        binding.btnRegis.setOnClickListener(new View.OnClickListener(){
+        binding.btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
 
@@ -69,34 +69,35 @@ public class LoginActivity extends AppCompatActivity {
 
                 String email = binding.emailLogin.getEditText().getText().toString();
                 String password = binding.password.getEditText().getText().toString();
-                if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)){
+                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                     pd.dismiss();
                     Toast.makeText(LoginActivity.this, "Mohon isi semua field", Toast.LENGTH_SHORT).show();
-                }else{
-                    auth.signInWithEmailAndPassword(email,password)
+                } else {
+                    auth.signInWithEmailAndPassword(email, password)
                             .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful ()){
+                                    if (task.isSuccessful()) {
                                         reference = FirebaseDatabase.getInstance().getReference().child("Users")
                                                 .child(auth.getCurrentUser().getUid());
 
                                         reference.addValueEventListener(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                                pd.dismiss ();
+                                                pd.dismiss();
                                                 Intent intent = new Intent(LoginActivity.this, LandingActivity.class);
-                                                intent.addFlags (Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) ;
+                                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
-                                                finish ();
+                                                finish();
                                             }
+
                                             @Override
                                             public void onCancelled(@NonNull DatabaseError error) {
                                                 pd.dismiss();
                                             }
                                         });
 
-                                    }else{
+                                    } else {
                                         pd.dismiss();
                                         Toast.makeText(LoginActivity.this, "Login gagal", Toast.LENGTH_SHORT).show();
                                     }

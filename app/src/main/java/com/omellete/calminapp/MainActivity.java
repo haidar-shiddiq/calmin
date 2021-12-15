@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         PaperOnboardingPage src1 = new PaperOnboardingPage("Selamat Datang","Swipe untuk memulai",
                 Color.parseColor("#AADE87"),R.drawable.calmin,R.drawable.calmin_mini);
         PaperOnboardingPage src2 = new PaperOnboardingPage("Kembangkan Diri","Buat dirimu menjadi orang yang lebih tenang",
-                Color.parseColor("#F57B51"),R.drawable.ic_self_improvement_big,R.drawable.ic_self_improvement_big);
+                Color.parseColor("#F57B51"),R.drawable.ic_mental_health,R.drawable.ic_mental_health);
         PaperOnboardingPage src3 = new PaperOnboardingPage("Zona Tenang","Nikmati ketenangan",
-                Color.parseColor("#44D6E9"),R.drawable.ic_nature_people_big,R.drawable.ic_nature_people_big);
+                Color.parseColor("#44D6E9"),R.drawable.ic_moon,R.drawable.ic_moon);
 
         ArrayList<PaperOnboardingPage> elements = new ArrayList<>();
         elements.add(src1);
