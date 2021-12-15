@@ -8,11 +8,17 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.ViewCompat;
 
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.omellete.calminapp.databinding.ActivityProfileBinding;
+
+import java.util.Objects;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -34,14 +42,35 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityProfileBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#2196F3"));
-        actionBar.setBackgroundDrawable(colorDrawable);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsingToolbar);
+        collapsingToolbarLayout.setTitle("Profil");
+
+            (binding.appBar).addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+                @Override
+                public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                    int min_height = ViewCompat.getMinimumHeight(binding.collapsingToolbar) * 2;
+                    float scale = (float) (min_height + verticalOffset) / min_height;
+                    binding.profileCard.setScaleX(scale >= 0 ? scale : 0);
+                    binding.profileCard.setScaleY(scale >= 0 ? scale : 0);
+                    if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()) {
+                        // If collapsed, then do this
+                        binding.calminProfile.setVisibility(View.VISIBLE);
+                    } else if (verticalOffset == 0) {
+                        // If expanded, then do this
+                        binding.calminProfile.setVisibility(View.GONE);
+                    }
+                }
+            });
+
+        collapsingToolbarLayout.setCollapsedTitleTextColor(
+                ContextCompat.getColor(this, R.color.white));
+        collapsingToolbarLayout.setExpandedTitleColor(
+                ContextCompat.getColor(this, R.color.white));
 
         firebaseAuth = FirebaseAuth.getInstance();
         final FirebaseUser currentUser = firebaseAuth.getCurrentUser();
@@ -55,6 +84,7 @@ public class ProfileActivity extends AppCompatActivity {
                 name = dataSnapshot.child("username").getValue(String.class);
                 Log.d(TAG, "Nameeee: " + name);
                 binding.profileName.setText(name);
+                binding.tvNamee.setText(name);
             }
 
             @Override
