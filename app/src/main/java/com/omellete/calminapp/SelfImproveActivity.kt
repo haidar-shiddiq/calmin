@@ -24,6 +24,7 @@ class SelfImproveActivity : AppCompatActivity() {
         get() {
             val dataJudulArtikel = resources.getStringArray(R.array.judul)
             val dataPenulisArtikel = resources.getStringArray(R.array.penulis)
+            val dataSumberArtikel = resources.getStringArray(R.array.sumber)
             val dataImg = resources.obtainTypedArray(R.array.gambarArtikel)
             val dataIsiArtikel = resources.getStringArray(R.array.isiArtikel)
             val list = arrayListOf<Artikel>()
@@ -31,6 +32,7 @@ class SelfImproveActivity : AppCompatActivity() {
                 val artikel = Artikel(
                     dataJudulArtikel[position],
                     dataPenulisArtikel[position],
+                    dataSumberArtikel[position],
                     dataImg.getResourceId(position,-1),
                     dataIsiArtikel[position]
                 )

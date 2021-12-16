@@ -2,21 +2,87 @@
 <resources>
     <string-array name="judul">
         <item>Artikel nomor 1</item>
+        <item>Kesehatan Mental</item>
+        <item>Musik Bisa Hilangkan Stres, Bagaimana Caranya?</item>
     </string-array>
 
     <string-array name="penulis">
         <item>Penulis nomor 1</item>
+        <item>Viva Health</item>
+        <item>Mahardini Nur Afifah
+
+ </item>
+    </string-array>
+
+    <string-array name="sumber">
+        <item>tidak ada sumber</item>
+        <item>Viva Health</item>
+        <item>Kompas.com</item>
     </string-array>
 
     <string-array name="isiArtikel">
         <item>Artikel nomor 1</item>
+        <item>Kesehatan mental mencakup beberapa hal seperti kenyamanan emosional, psikologi dan hubungan sosial. Ketiga aspek tersebut dapat mempengaruhi cara seseorang berpikir, merasakan dan bertindak. Selain itu juga mempengaruhi cara mengatasi stress, menjalani hubungan dengan orang lain dan membuat keputusan. Kesehatan mental merupakan hal yang penting mulai dari anak-anak, remaja hingga dewasa.
+    Merupakan hal yang sulit untuk membedakan kesehatan mental normal dengan penyakit mental karena tidak ada tes yang mudah untuk menunjukkan ada yang salah. Gangguan kesehatan mental tidak seperti gangguan pada fisik yang dapat langsung diobati berdasarkan tanda dan gejala, tetapi berdasarkan seberapa besar kondisi mempengaruhi kehidupan sehari-hari. Berikut beberapa hal yang dapat terpengaruh:
+                \n
+                \n\t1.Tingkah laku. Perubahan tingkah laku dapat terjadi seperti konsumsi telalu banyak alcohol.
+                \n \n \t2.Perasaan. Terkadang kondisi kesehatan mental yang terganggu ditandai dengan timbulnya kesedihan yang mendalam atau berkelanjutan.
+                \n \n \t3.Cara Pikir \n
+                <b> \nKapan Seseorang Butuh Terapi?\n</b>
+                Setiap kondisi kesehatan mental memiliki tanda dan gejala sendiri. Namun, secara umum bantuan professional mungkin dibutuhkan jika seseorang mengalami:
+                \n \n1.Perubahan kepribadian, pola makan atau tidur
+                \n \n2.Ketidakmampuan untuk mengatasi masalah atau kegiatan sehari-hari
+                \n \n3.Mengalami kecemasan yang berlebihan
+                \n \n4.Mengalami depresi atau apatis yang berkepanjangan
+                \n \n5.Berpikir atau berbicara tentang bunuh diri
+                \n \n6.Penyalahgunaan obat-obatan
+                \n \n7.Mengalami perubahan suasana hati yang ekstrim atau kemarahan yang berlebihan atau bahkan melakukan perilaku kekerasan
+                <b> \n \nBagaimana Mencegah Gangguan Kesehatan Mental?</b>
+                \tStress adalah penyebab yang sering dikaitkan pada seseorang yang mengalami gangguan kesehatan mental. Berikut beberapa langkah yang dapat dilakukan untuk mengatasi stress:
+
+                \n \n <b>1.Melakukan Aktifitas Fisik Secara Rutin</b>
+                \nSemua bentuk aktifitas fisik dapat berguna sebagai penghilang stress. Aktifitas fisik dapat memompa endorphin dan zat kimia alami lainnya yang dapat meningkatkan rasa nyaman. Olahraga juga dapat membuat membuat seseorang berfokus pada gerakan, meningkatkan suasana hati dan mengurangi perasaaan buruk.
+                \n \n <b>2.Mengkonsumsi Makanan Sehat</b>
+                \nMengkonsumsi makanan sehat merupakan bagian penting dari menjaga diri sendiri. Beberapa jenis makanan yang baik bagi tubuh seperti buah, sayuran dan biji-bijian.
+                \n \n <b>3.Hindari Kebiasaan yang Tidak Sehat</b>
+                \nBeberapa orang mengatasi stress dengan mengkonsumsi terlalu banyak kafein, alkohol, merokok, atau obat-obatan terlarang. Hal tersebut dapat mempengaruhi kesehatan.
+                \n \n <b>4.Meditasi</b>
+                \nSaat melakukan meditasi, maka seseorang akan memusatkan perhatian dan menenangkan pikiran yang mungkin dapat menyebabkan stress. Meditasi dapat memberikan rasa tenang dan damai yang bermanfaat bagi kesejahteraan emosional.
+                \n \n <b>5.Tertawa</b>
+                \nTertawa tidak hanya meringankan beban mental tetapi juga menyebabkan perubahan fisik secara positef pada tubuh.
+                \n \n <b>6.Memiliki Orang Terdekat</b>
+                \nKetika seseorang merasa stress maka biasanya akan menutup diri. Namun, sebaiknya menemui teman atau orang terdekat untuk meredakan stress.
+                \n \n <b>7.Melakukan Yoga</b>
+                \nYoga merupakan kegiatan penghilang stress yang populer. Gerakan yoga menyatukan fisik dan mental yang dapat membantu seseorang mendapatkan kedamaian.
+                \n \n <b>8.Memiliki Tidur yang Cukup</b>
+                \nStress akan menyebabkan seseorang sulit untuk tidur. Namun, tidur adalah waktu ketika otak dan tubuh beristirahat. Kualitas dan jumlah tidur dapat mempengaruhi suasana hati, energi, konsentrasi dan fungsi tubuh secara keseluruhan. Miliki tidur yang berkualitas dengan merilekskan diri sebelum jadwal tidur, mendengarkan musik yang menenangkan dan membuat suasana kamar menjadi nyaman seperti dengan aromaterapi.
+
+        </item>
+        <item>Kompas.com - Mendengarkan musik sesuai selera dapat membantu mengatasi stres.
+            \nMelansir Time (28/4/2018), musik terbukti positif untuk kesehatan mental dan fisik
+            \n Manfaat musik di antaranya menangkal depresi, memperbaiki suasana hati, meningkatkan aliran darah, dan mengurangi rasa sakit. Selain itu, musik juga bisa digunakan sebagai salah satu cara mengurangi stres. Baca juga: 6 Titik Pijat Sakit Kepala untuk Redakan Ketegangan dan Stres
+            \n \n <b>Bagaimana musik bisa menghilangkan stres?</b>
+            \nPenelitian dari School of Public Health University West Virginia AS (2016) membuktikan, musik dapat meredakan stres dan memperbaiki suasana hati.
+            \n \n"Musik mengaktifkan sistem neurokimia dan struktur otak terkait suasana hati yang positif," jelas Kim Innes, profesor epidemiologi yang memimpin riset.
+            \nMenurut Innes, kemampuan musik dalam meredam stres dan memperbaiki suasana hati sama ampuhnya dengan praktik meditasi.
+            \n \n "Bagi Anda yang tidak terbiasa meditasi, mendengarkan musik jauh lebih praktis untuk mengatasi stres," kata Innes.
+            \n Pilih musik yang benar-benar tepat dan sesuai selera Anda agar tidak jadi bumerang untuk stres.
+            \n <b>Musik juga bisa jadi bumerang mengatasi stres</b>
+            \n \n <b>Hati-hati, pemilihan musik yang kurang pas atau acak justru bisa mengganggu suasana hati.</b>
+            \n \n"Untuk mengatasi stres, hening tanpa musik justru lebih baik daripada mendengarkan musik yang acak atau tidak sesuai selera," kata Joanne Loewy dari Mount Sinai Beth Israel di New York, AS.
+            \nSelain bisa menganggu suasana hati, mendengarkan musik yang tidak pas justru memicu emosi negatif. Menurut studi dari Finlandia (2015), musik yang tidak tepat dapat memicu kemarahan, sikap agresif, dan kesedihan. Pasalnya, beberapa ritme dan lirik lagu dari musik yang kita dengarkan dapat memacu detak jantung, saraf, dan otak.
+            \n \n <b>Memilih musik untuk mengatasi stres</b>
+            \nSains membuktikan, musik bertempo 60 bpm paling pas untuk membuat pikiran rileks. Tempo musik itu sinkron dengan gelombang otak saat pikiran Anda rileks. Sehingga, Anda dapat terbebas dari stres saat mendengarkan musik dengan rentang tempo tersebut. Namun, sebenarnya tidak ada patokan baku untuk memilih musik yang tepat saat stres. Pasalnya, setiap orang memiliki selera musik yang berbeda-beda. Menurut layanan konselor dari University of Nevada Reno AS, musik relaksasi yang bertebaran di internet belum tentu ampuh mengatasi stres buat seseorang. Bagi orang yang sudah terbiasa mendengarkan genre musik tertentu, musik metal atau dangdut terkadang bikin lebih nyaman atau rileks. Untuk menentukan musik paling pas untuk meredakan stres bagi diri sendiri, Anda perlu memutar berbagai jenis musik sesuai selera Anda
+
+
+        </item>
     </string-array>
 
     <string-array name="gambarArtikel">
         <item>@drawable/stressno1</item>
+        <item>@drawable/mental_health</item>
+        <item>@drawable/music_dragonimages</item>
     </string-array>
 
-    <string-array name="Judul">
-        <item>Artikel nomor 1</item>
-    </string-array>
+
 </resources>

@@ -28,7 +28,7 @@
                 android:id="@+id/tv_judul_artikel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
                 android:textColor="@android:color/white"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="16dp"
@@ -60,13 +60,6 @@
                     android:textStyle="bold"
                     android:layout_marginEnd="16dp"
                     />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="14sp"
-                    android:layout_marginEnd="16dp"
-                    android:text=":"
-                    />
 
                 <TextView
                     android:id="@+id/tv_penulis_artikel"
@@ -74,8 +67,23 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="14sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/sumber_artikel"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="16dp"
+                    />
+                <TextView
+                    android:id="@+id/tv_sumber_artikel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp" />
             </TableRow>
         </TableLayout>
+
         <TextView
             android:id="@+id/tv_isi_artikel"
             android:layout_width="match_parent"

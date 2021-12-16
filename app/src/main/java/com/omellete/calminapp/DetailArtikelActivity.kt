@@ -19,6 +19,7 @@ class DetailArtikelActivity : AppCompatActivity() {
 
         val artikelGambar: ImageView = findViewById(R.id.img_item_photo)
         val tvArtikelJudul: TextView = findViewById(R.id.tv_judul_artikel)
+        val tvArtikelSumber: TextView = findViewById(R.id.tv_sumber_artikel)
         val tvArtikelPenulis: TextView = findViewById(R.id.tv_penulis_artikel)
         val tvArtikelIsiArtikel: TextView = findViewById(R.id.tv_isi_artikel)
 
@@ -30,6 +31,7 @@ class DetailArtikelActivity : AppCompatActivity() {
             .apply(RequestOptions())
             .into(artikelGambar)
         tvArtikelJudul.text = artikelNameFinal
+        tvArtikelSumber.text = artikel.sumber
         tvArtikelPenulis.text = artikel.penulis
         tvArtikelIsiArtikel.text = artikel.isiartikel
 

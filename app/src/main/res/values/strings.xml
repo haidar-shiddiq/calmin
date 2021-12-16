@@ -5,7 +5,8 @@
     <string name="login">Log In</string>
     <string name="register">Belum punya akun? Register</string>
     <string name="judul_artikel">Judul Artikel</string>
-    <string name="penulis_artikel">Penulis</string>
+    <string name="penulis_artikel">Penulis : </string>
+    <string name="sumber_artikel">Sumber : </string>
     <string name="isi_artikel">Isi Artikel</string>
     <string name="gambar_desc">Gambar Deskripsi</string>
     <!-- TODO: Remove or change this placeholder text -->
