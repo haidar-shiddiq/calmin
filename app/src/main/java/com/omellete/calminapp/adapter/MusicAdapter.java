@@ -1,7 +1,11 @@
 package com.omellete.calminapp.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +26,16 @@ public class MusicAdapter extends BaseAdapter {
     private ArrayList<Music> arrayList;
     private MediaPlayer mediaPlayer;
     private Boolean flag = true;
+    String song,singer;
+    MusicAdapter adapter;
+    Dialog dialog;
+    Handler mHandler;
 
     public MusicAdapter(Context context, int layout, ArrayList<Music> arrayList) {
         this.context = context;
         this.layout = layout;
         this.arrayList = arrayList;
+        this.adapter = this;
     }
 
     @Override
@@ -40,7 +49,7 @@ public class MusicAdapter extends BaseAdapter {
     }
 
     public void stopPlayer() {
-        if (!flag){
+        if (!flag) {
             mediaPlayer.stop();
         }
     }
@@ -69,7 +78,6 @@ public class MusicAdapter extends BaseAdapter {
             viewHolder.ivStop = (ImageView) convertView.findViewById(R.id.ivStop);
             viewHolder.imgBg = (ImageView) convertView.findViewById(R.id.cardBackground);
             viewHolder.ivMusic = (ImageView) convertView.findViewById(R.id.ivMusic);
-            viewHolder.ivStop.setVisibility(View.GONE);
 
 
             convertView.setTag(viewHolder);
@@ -78,6 +86,8 @@ public class MusicAdapter extends BaseAdapter {
         }
 
         final Music music = arrayList.get(position);
+        dialog = new Dialog(convertView.getContext());
+        mHandler = new Handler();
 
         viewHolder.txtName.setText(music.getName());
         viewHolder.txtSinger.setText(music.getSinger());
@@ -95,17 +105,28 @@ public class MusicAdapter extends BaseAdapter {
                 if (flag) {
                     mediaPlayer = MediaPlayer.create(context, music.getSong());
                     mediaPlayer.setLooping(true);
+                    mediaPlayer.start();
+                    song = music.getName();
+                    singer = music.getSinger();
+                    alertPlaying(song,singer);
+                    flag = false;
+                } else {
+                    mediaPlayer.stop();
+                    mediaPlayer = MediaPlayer.create(context, music.getSong());
+                    mediaPlayer.setLooping(true);
+                    mediaPlayer.start();
+                    song = music.getName();
+                    singer = music.getSinger();
+                    alertPlaying(song,singer);
                     flag = false;
                 }
-                if (mediaPlayer.isPlaying()) {
-                    mediaPlayer.pause();
-                    viewHolder.ivPlay.setImageResource(R.drawable.ic_play);
-                } else {
-                    mediaPlayer.start();
-
-                    viewHolder.ivPlay.setImageResource(R.drawable.ic_pause);
-                    viewHolder.ivStop.setVisibility(View.VISIBLE);
-                }
+//                if (mediaPlayer.isPlaying()) {
+//                    mediaPlayer.pause();
+//                    viewHolder.ivPlay.setImageResource(R.drawable.ic_play);
+//                } else {
+//                    mediaPlayer.start();
+//                    viewHolder.ivPlay.setImageResource(R.drawable.ic_pause);
+//                }
             }
         });
 
@@ -116,7 +137,6 @@ public class MusicAdapter extends BaseAdapter {
                 if (!flag) {
                     mediaPlayer.stop();
                     mediaPlayer.release();
-                    viewHolder.ivStop.setVisibility(View.GONE);
                     flag = true;
                 }
                 viewHolder.ivPlay.setImageResource(R.drawable.ic_play);
@@ -124,5 +144,21 @@ public class MusicAdapter extends BaseAdapter {
         });
 
         return convertView;
+    }
+
+    public void alertPlaying(String song, String singer) {
+        dialog.setContentView(R.layout.alert_playing);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        TextView tvSong = dialog.findViewById(R.id.tvSong);
+        TextView tvSinger = dialog.findViewById(R.id.tvSingere);
+        tvSong.setText(song);
+        tvSinger.setText(singer);
+        dialog.show();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+            }
+        },10000L);
     }
 }
