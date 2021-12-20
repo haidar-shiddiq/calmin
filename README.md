@@ -17,11 +17,11 @@ Library :
 
 Other Resources :
 
-- raining background (personal and commercial) <a href='https://www.freepik.com/photos/pattern%27%3EPattern photo created by Kireyonok_Yuliya - www.freepik.com</a>
+- raining background (personal and commercial) https://www.freepik.com/photos/pattern%27%3EPattern photo created by Kireyonok_Yuliya - www.freepik.com
 
-- forest background (personal and commercial) <a href='https://www.freepik.com/photos/tree%27%3ETree photo created by wirestock - www.freepik.com</a>
+- forest background (personal and commercial) https://www.freepik.com/photos/tree%27%3ETree photo created by wirestock - www.freepik.com
 
-- polygon icon <a href='https://www.freepik.com/vectors/background%27%3EBackground vector created by freepik - www.freepik.com</a>
+- polygon icon https://www.freepik.com/vectors/background%27%3EBackground vector created by freepik - www.freepik.com
   
 - profile icon <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
