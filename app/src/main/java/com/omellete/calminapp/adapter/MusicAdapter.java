@@ -104,8 +104,8 @@ public class MusicAdapter extends BaseAdapter {
             public void onClick(View v) {
                 if (flag) {
                     mediaPlayer = MediaPlayer.create(context, music.getSong());
-                    mediaPlayer.setLooping(true);
                     mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
                     song = music.getName();
                     singer = music.getSinger();
                     alertPlaying(song,singer);
@@ -113,20 +113,13 @@ public class MusicAdapter extends BaseAdapter {
                 } else {
                     mediaPlayer.stop();
                     mediaPlayer = MediaPlayer.create(context, music.getSong());
-                    mediaPlayer.setLooping(true);
                     mediaPlayer.start();
+                    mediaPlayer.setLooping(true);
                     song = music.getName();
                     singer = music.getSinger();
                     alertPlaying(song,singer);
                     flag = false;
                 }
-//                if (mediaPlayer.isPlaying()) {
-//                    mediaPlayer.pause();
-//                    viewHolder.ivPlay.setImageResource(R.drawable.ic_play);
-//                } else {
-//                    mediaPlayer.start();
-//                    viewHolder.ivPlay.setImageResource(R.drawable.ic_pause);
-//                }
             }
         });
 

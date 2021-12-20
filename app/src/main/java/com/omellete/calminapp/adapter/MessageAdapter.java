@@ -50,7 +50,16 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
             holder.sender.setTextColor(context.getResources().getColorStateList(R.color.myChatTextName));
             holder.tvTittle.setTextColor(context.getResources().getColorStateList(R.color.myChatText));
             holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChat));
-        }else{
+        }else if(message.getName().equals("Anon-SuyI5zL***")){
+            holder.sender.setText("Admin");
+            holder.tvTittle.setText(message.getMessage());
+            holder.tvTittle.setGravity(Gravity.START);
+            holder.sender.setTextColor(context.getResources().getColorStateList(R.color.myChatTextAdmin));
+            holder.tvTittle.setTextColor(context.getResources().getColorStateList(R.color.myChatText));
+            holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChatTextNameAdmin));
+            holder.ibDelete.setVisibility(View.GONE);
+        }
+        else{
             holder.sender.setText(message.getName());
             holder.tvTittle.setText(message.getMessage());
             holder.ibDelete.setVisibility(View.GONE);

@@ -46,7 +46,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     User u;
     List<Message> messages;
     ActivityGroupSharingBinding binding;
-    public String userDname;
+    public String userDname,userAnonim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +87,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         if (!TextUtils.isEmpty(binding.etMessage.getText().toString())) {
-            Message message = new Message(binding.etMessage.getText().toString(), userDname);
+            Message message = new Message(binding.etMessage.getText().toString(), userAnonim);
             binding.etMessage.setText("");
             reference.push().setValue(message);
         } else {
@@ -111,6 +111,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
         DatabaseReference ref = firebaseDatabase.getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
         String userKey = user.getUid();
+        userAnonim = "Anon-"+userKey.substring(0,7)+"***";
         ref.child("Users").child(userKey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -129,7 +130,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 u = snapshot.getValue(User.class);
                 u.setuid(currentUser.getUid());
-                AllMethods.name = userDname;
+                AllMethods.name = userAnonim;
             }
 
             @Override

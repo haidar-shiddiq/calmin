@@ -9,7 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="myChat">#D8D8D8</color>
     <color name="myChatText">#292929</color>
+    <color name="myChatTextAdmin">#811919</color>
     <color name="myChatTextName">#2196F3</color>
+    <color name="myChatTextNameAdmin">#AADE87</color>
     <color name="greenTheme">#4FB1FF</color>
 
 </resources>
