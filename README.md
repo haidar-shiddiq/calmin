@@ -41,4 +41,14 @@ Other Resources :
 
 - Subway background <a href='https://www.freepik.com/photos/japan'>Japan photo created by freepik - www.freepik.com</a>
 
+- Support of colleague <a href="https://www.freepik.com/photos/business">Business photo created by pressfoto - www.freepik.com</a>
+
+- Mental health for women vector <a href="https://www.freepik.com/vectors/background">Background vector created by rawpixel.com - www.freepik.com</a>
+
+- Passionate concept illustration <a href="https://www.freepik.com/vectors/music">Music vector created by stories - www.freepik.com</a>
+
+- Depression concept illustration <a href="https://www.freepik.com/vectors/people">People vector created by stories - www.freepik.com</a>
+
+- Hopeless man <a href="https://www.freepik.com/photos/people">People photo created by pressfoto - www.freepik.com</a>
+
 - open source icon from remixicon.com https://remixicon.com/
