@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="judul">
-        <item>Artikel nomor 1</item>
+
         <item>Kesehatan Mental</item>
         <item>Musik Bisa Hilangkan Stres, Bagaimana Caranya?</item>
+        <item>Mengenal PTSD (Post Traumatic Stress Disorder)</item>
+        <item>How to Say No to Taking on More Work</item>
+        <item>9 Cara Sederhana Menjaga Kesehatan Mental</item>
     </string-array>
 
     <string-array name="penulis">
-        <item>Penulis nomor 1</item>
-        <item>Viva Health</item>
-        <item>Mahardini Nur Afifah
 
- </item>
+        <item>Viva Health</item>
+        <item>Mahardini Nur Afifah </item>
+        <item>Redaksi Halodoc</item>
+        <item>Rebecca Knight</item>
+        <item>Dr. Gabriella Florencia</item>
+
     </string-array>
 
     <string-array name="sumber">
-        <item>tidak ada sumber</item>
+
         <item>Viva Health</item>
         <item>Kompas.com</item>
+        <item>Halodoc</item>
+        <item>Harvard Bussiness Review</item>
+        <item>Halodoc</item>
     </string-array>
 
     <string-array name="isiArtikel">
-        <item>Artikel nomor 1</item>
+
         <item>Kesehatan mental mencakup beberapa hal seperti kenyamanan emosional, psikologi dan hubungan sosial. Ketiga aspek tersebut dapat mempengaruhi cara seseorang berpikir, merasakan dan bertindak. Selain itu juga mempengaruhi cara mengatasi stress, menjalani hubungan dengan orang lain dan membuat keputusan. Kesehatan mental merupakan hal yang penting mulai dari anak-anak, remaja hingga dewasa.
     Merupakan hal yang sulit untuk membedakan kesehatan mental normal dengan penyakit mental karena tidak ada tes yang mudah untuk menunjukkan ada yang salah. Gangguan kesehatan mental tidak seperti gangguan pada fisik yang dapat langsung diobati berdasarkan tanda dan gejala, tetapi berdasarkan seberapa besar kondisi mempengaruhi kehidupan sehari-hari. Berikut beberapa hal yang dapat terpengaruh:
                 \n
@@ -76,12 +84,168 @@
 
 
         </item>
+        <item>Pengertian PTSD\n \n
+        PTSD (Post-Traumatic Stress Disorder) atau gangguan stres pasca trauma adalah kondisi kesehatan jiwa yang dipicu oleh peristiwa yang traumatis, baik dengan mengalaminya maupun menyaksikannya. Kebanyakan orang yang mengalami kejadian traumatis akan menghadapi kesulitan dalam menjalaninya, tetapi dengan waktu dan perawatan diri yang baik, kesulitan akan berkurang. Jika pengalaman yang traumatis tersebut tetap menghantui sampai membuat seseorang kesulitan dalam menjalani hidup, maka orang tersebut mengidap PTSD.
+        \n \n
+        Penyebab dan Faktor Risiko PTSD\n\n
+        Seseorang dapat mengembangkan gangguan stres pasca trauma ketika ia mengalami, melihat, atau belajar tentang suatu peristiwa yang melibatkan kematian atau ancaman kematian yang aktual, cedera serius, ataupun pelanggaran seksual.
+        \n \n
+        Dokter tidak yakin mengapa beberapa orang mendapat PTSD. Seperti masalah kesehatan mental pada umumnya, kombinasi beberapa faktor yang kompleks mungkin menjadi penyebab PTSD, yaitu:
+        \n \n
+        1. Pengalaman yang menakutkan, termasuk jumlah dan tingkat keparahan trauma yang telah dialami dalam hidup.\n
+        2. Mewarisi risiko kesehatan mental, seperti riwayat gangguan kecemasan dan depresi dalam keluarga.\n
+        3. Ciri-ciri kepribadian, seperti kecenderungan temperamental.\n
+        4. Cara otak mengatur bahan kimia dan hormon yang dilepaskan tubuh sebagai respons terhadap stres.\n \n
+        Semua orang dari segala usia dapat mengalami gangguan stres pasca trauma. Namun, beberapa faktor dapat membuat seseorang lebih mungkin mengembangkan PTSD, seperti:
+        \n\n
+        1. Mengalami trauma yang intens.\n
+        2. Pernah mengalami trauma lain di awal kehidupan, seperti pelecehan masa kanak-kanak. \n
+        3. Memiliki pekerjaan yang meningkatkan risiko terkena peristiwa traumatis, seperti personil militer dan responden pertama.\n
+        4. Memiliki masalah kesehatan mental lainnya, seperti kecemasan atau depresi. \n
+        5. Memiliki masalah dengan penyalahgunaan zat, seperti minum berlebihan atau penggunaan narkoba. \n
+        6. Kurangnya sistem pendukung yang baik dari keluarga dan teman. \n
+        7. Memiliki kerabat darah dengan masalah kesehatan mental, termasuk kecemasan atau depresi. \n \n
+
+
+        Gejala PTSD \n \n
+        Kemunculan gejala yang ditimbulkan PTSD beragam, ada yang muncul dalam 1 bulan setelah kejadian. Namun dalam beberapa kasus, gejala baru akan muncul bertahun-tahun setelah seseorang mengalami kejadian traumatis. Gejala PTSD pada umumnya dibagi menjadi 4 tipe, yaitu ingatan intrusif, avoidance atau menghindar, perubahan negatif pada cara berpikir, mood, serta perubahan reaksi fisik dan emosional. \n \n
+
+        1. Gejala Ingatan Intrusif \n
+
+        -Ingatan yang tidak diinginkan, yaitu bersifat mengganggu yang datang berulang. \n
+        -Menghidupkan peristiwa traumatis tersebut seakan-akan peristiwa tersebut terjadi lagi (kilas balik). \n
+        -Mimpi buruk tentang peristiwa tersebut. \n
+        -Distress emosional berat terhadap sesuatu yang mengingatkan pengidap pada peristiwa traumatis. \n \n
+
+        2. Avoidancen \n
+
+        -Mencoba menghindari berpikir atau berbicara tentang peristiwa traumatis. \n
+        -Menghindari tempat, kegiatan atau orang yang mengingatkan seseorang pada kejadian traumatis. \n \n
+
+        3. Perubahan Negatif pada Cara Berpikir dan Mood \n
+
+        -Pikiran negatif tentang orang lain, diri sendiri, lingkungan, bahkan dunia.\n
+        -Putus asa tentang masa depan.\n
+        -Masalah memori, termasuk tidak mengingat aspek penting dari peristiwa traumatis.\n
+        -Kesulitan mempertahankan hubungan dekat.\n
+        -Merasa terlepas dari keluarga dan teman.\n
+        -Kurangnya minat dalam kegiatan yang pernah dinikmati.\n
+        -Kesulitan mengalami emosi positif.\n
+        -Merasa mati rasa secara emosional.\n \n
+
+        4. Perubahan pada Reaksi Emosional maupun Fisik \n
+
+        -Menjadi mudah kaget atau ketakutan.\n
+        -Selalu waspada terhadap bahaya\n
+        -Perilaku merusak diri, seperti minum terlalu banyak atau mengemudi terlalu cepat;\n
+        -Kesulitan tidur\n
+        -Kesulitan berkonsentrasi.\n
+        -Kerapuhan, ledakan kemarahan atau perilaku agresif.\n
+        -Rasa bersalah atau malu yang luar biasa.\n \n
+
+
+        Diagnosis PTSD \n
+        Cara mendiagnosis gangguan stres pasca-trauma, dokter kemungkinan akan melakukan beberapa hal ini, yaitu: \n
+
+        -Pemeriksaan pada fisik terdiagnosa untuk memeriksa masalah medis yang mungkin menjadi penyebab gejala PTSD.\n
+        -Melakukan evaluasi psikologis yang mencakup diskusi tentang tanda dan gejala dan peristiwa atau peristiwa yang mengarah ke diagnosis PTSD.\n
+        -Menggunakan kriteria dalam Manual Diagnostik dan Statistik Gangguan Mental (DSM-5), yang diterbitkan oleh American Psychiatric Association.\n \n
+
+        Pengobatan PTSD \n
+        Pengobatan gejala PTSD umumnya terdiri dari terapi obat-obatan dan juga dilakukan psikoterapi. \n \n
+
+        1. Psikoterapi\n
+
+        -Terapi kognitif. Membantu pengidap untuk mengenali cara pikir (pola kognitif) yang menyebabkan terhambatnya pengidap dalam proses melalui peristiwa traumatis tersebut.\n
+        -Terapi paparan. Terapi paparan bertujuan untuk membantu pengidap agar bisa menghadapi situasi dan memori yang dianggap menakutkan, sehingga pengidap dapat menghadapinya dengan efektif. Terapi ini efisien terutama pada kasus di mana pengidap mengalami kilas balik atau mimpi buruk.\n
+        -Eye movement desensitization and reprocessing (EMDR). EMDR menggabungkan terapi paparan dan sebuah serial pergerakkan mata terarah untuk membantu pengidap memproses sebuah peristiwa traumatis dan dokter akan mengamati reaksi pengidap.\n \n
+
+        2. Obat-Obatan \n
+
+        -Antidepresan. Obat ini membantu meringankan gejala depresi, cemas, gangguan tidur dan gangguan konsentrasi.\n
+        -Antikecemasan. Obat ini membantu meredakan gangguan cemas yang berat.\n \n
+
+
+        Pencegahan PTSD\n
+        Setelah selamat dari peristiwa traumatis, banyak orang mengalami gejala mirip PTSD pada awalnya, seperti tidak dapat berhenti memikirkan apa yang terjadi. Ketakutan, kecemasan, kemarahan, depresi, rasa bersalah adalah reaksi umum terhadap trauma. Namun, mayoritas orang yang mengalami trauma tidak mengembangkan gangguan stres pasca-trauma jangka panjang.\n \n
+
+        Pencegahan juga bisa dilakukan dengan mencari bantuan dan dukungan yang tepat waktu. Hal ini bertujuan agar reaksi stres yang normal menjadi semakin buruk dan berkembang menjadi PTSD, bisa dicegah. Ini bisa berarti beralih ke keluarga dan teman-teman yang akan mendengarkan dan menawarkan kenyamanan. Hal ini bisa juga dilakukan dengan mencari ahli kesehatan mental untuk terapi singkat. Beberapa orang mungkin juga merasa berguna untuk beralih ke komunitas iman mereka. \n \n
+
+        Dukungan dari orang lain juga dapat membantu mencegah seseorang beralih ke cara mengatasi trauma yang tidak sehat, seperti penyalahgunaan alkohol atau obat-obatan.
+        </item>
+        <item>
+            Melakukan penolakan termasuk hal yang sulit bahkan alami untuk manusia. beberapa orang bahkan enggan menolak karena tidak ingin kolega, bos, ataupun klien yang memberikan permintaan terlihat kecewa. Namun apabila melakukan kerja berlebih akan sangat melelahkan dan menambah stress. Maka dari itu diperlukan langkah-langkah yang tepat untuk melakukan penolakan sehingga dapat menghindari atau meminimalisir beberapa dampat negatif dari penolakan yang kita lakukan sehingga masa depan kita dan organisasi dapat terjamin. \n \n
+
+            1. Menilai Permintaan tersebut \n
+            Membuat penilaian terlebih dahulu akan sangat penting untuk mengetahui apakan permintaan tersebut dapat dilakukan atau tidak. Dengan mimikirkan seberapa besar beban yang kita tanggung ketikan menerima permintaan tersebut serta pikirkan seberapa besar pengaruhnya terhadap dirimu. Ketika itu adalah hal yang sangat penting maka prioritas dapat disampingkan atau kalian dapat melakukan pertukaran dengan hal-hal yang dapat menguntungkan kedua belah \n \n
+
+            2.	Jujur \n
+            Berkatalah jujur apabila memang tidak dapat membantu dikarenakan beban pekerjaan yang dikerjakan. Jangan lupa berikan sebuah alasan yang kuat kenapa kita tidak dapat membantu pekerjaannya. Jangan menahan-nahan alasan yang nantinya menyebabkan alasan tersebut tidak dapat menyakinkan orang yang meminta sehingga orang tersebut tetap memaksa anda untuk dapat membantunya. \n \n
+
+            3.	Berikan bantuan sekecil apapun\n
+            Berkata tidak mungkin sedikit sulit dikarenakan untuk menjaga hubungan baik dan juga kalian berempati terhadap apa yang dialaminya. Mungkin dengan membantunya dengan menghadiri sesi pengumpulan ide, melihat draft, atau hanya sekadar menjadi konsultan terhadap projek yang mereka kerjakan. Walaupun tidak dapat membantu sama sekali tetap jaga sikap saat di tempat kerja. Bahkan berbasa-basi saat waktu istirahat dan menanyakan kelangsungan projek tersebut dapat membuat kita di mata orang lain masih perhatian terhadap permasalahan tersebut.\n \n
+
+            4.	Jangan terlalu jahat namun jangan terlalu baik\n
+            Selalu terdapat etika yang baik dan benar dalam segala hal. Dalam menolak pun terdapat beberapa etika yang harus dilakukan. Berikan penolakan sehingga orang yang meminta pertolongan jangan sampai merasa tidak enak. Perhatikan juga bahasa tubuh yang kita keluarkan sehingga tidak menyinggung perasaan orang tersebut. Tetap tegas saat memberikan penolakan jangan sampai tergoda saat memberikan sebuah penolakan. Kadang beberapa orang dapat tergoda ketika orang yang meminta bantuan tersebut terus mendorong kita agar dapat membantunya ketika kita terlihat ragu-ragu atau melunak kita dipojokan. Bahkan menjadi overly polite dapat membuat kita semakin dipojokan oleh orang. Sehingga sikap tegas namun sopan saat melakukan penolakan sangat penting.\n \n
+
+            5.	Sesuaikan harapan\n
+            “Kamu tidak bisa memuaskan setiap orang”. Peribahasa tersebut masih relavan sampai saat ini. Dengan kalian yang menolak permintaan dari kawan kerja ataupun klien dengan langkah-langkah diatas, kalian masih akan terkena imbas feedback negatif dari orang tersebut. Efek tersebut bisa dengan kalian yang dimaki-maki ataupun putusnya hubungan kalian. Sehingga kalian harus menyesuaikan apa yang akan dicapai dengan menyatakan penolakan. Jangan terlalu terpaku pada reaksi awal bahwa dia merasa frustasi. Dia mungkin frustasi namun tidak akan terbawa secara personal sehingga dia tidak akan marah terhadapmu secara jangka panjang. \n \n
+
+            6.	Berlatih\n
+            Latihlah cara penolakan yang tegas namun sopan sendirian ataupun dengan teman terpecaya. Latihlah sehingga penolakan yang kamu lakukan dapat dihargai oleh orang. Melakukan penolakan akan semakin mudah ketika sering melatihnya. Tanamkan tanggung jawab ketika melakukan penolakan walaupun kalian merasa iba terhadapnya. \n \n
+
+        </item>
+        <item>
+            Untuk meningkatkan kesejahteraan secara keseluruhan, kamu tidak bisa hanya berfokus pada kesehatan fisik. Kesehatan mental juga memainkan peran yang besar dalam kehidupan. Kesehatan mental sebagai kemampuan diri sendiri untuk mengelola perasaan dan menghadapi kesulitan sehari-hari.\n \n
+
+            Beberapa langkah sederhana bisa diterapkan untuk meningkatkan kualitas kesehatan mental. Dengan melakukan perubahan ini, maka dapat dipastikan hal ini memengaruhi semua aspek kehidupan. Dengan menjaga kesehatan mental, maka kamu merasakan beberapa efeknya seperti suasana hati yang membaik, membangun ketahanan, dan membantu menikmati hidup secara keseluruhan.
+            \n \n
+            Nah, untuk kamu yang merasa mudah mengalami stres atau gangguan kecemasan, berikut ini beberapa hal sederhana yang dapat meningkatkan kesehatan mental:
+            \n \n
+            1.Katakan Hal Positif pada Diri Sendiri\n
+            Penelitian menunjukkan bahwa cara kamu berpikir tentang diri sendiri dapat memiliki efek yang kuat pada kejiwaan kamu. Ketika kita memandang diri kita dan hidup kita secara negatif, maka kita juga merasakan efek negatifnya. Sebaliknya, jika membiasakan diri menggunakan kata-kata yang membuat lebih positif, maka hal ini membuat kamu lebih optimis.
+            \n \n
+
+
+            2.Tuliskan Hal-Hal yang Patut Disyukuri\n
+            Rasa bersyukur dikaitkan dengan peningkatan kesejahteraan, kualitas kesehatan mental, serta kebahagiaan. Cara sederhana untuk meningkatkan rasa bersyukur adalah membuat jurnal dan menuliskan berbagai hal yang patut disyukuri setiap harinya. Secara umum merenungkan rasa terima kasih juga efektif, tetapi kamu perlu berlatih secara teratur untuk mendapatkan manfaat jangka panjang. Temukan sesuatu untuk disyukuri dan nikmati perasaan tersebut dalam hatimu.
+            \n \n
+            3. Fokus pada Satu Hal pada Satu Waktu\n
+            Fokus kepada tujuan mampu melepaskan emosi negatif atau sulit dari pengalaman masa lalu yang membebani. Mulailah dengan membawa kesadaran bahkan untuk hal-hal sederhana seperti mandi, makan siang, atau berjalan pulang. Memberi perhatian pada sensasi fisik, suara, bau, atau rasa dari pengalaman ini membantu kamu untuk fokus. Ketika pikiran kamu terbang melayang hingga menyebabkan kamu overthinking, maka bawa saja kembali ke apa yang kini kamu tengah lakukan.
+            \n \n
+            4.Olahraga\n
+            Tubuh akan melepaskan endorfin yang membantu menyingkirkan stres dan meningkatkan suasana hati kamu sebelum dan sesudah berolahraga. Itulah sebabnya olahraga adalah cara penangkal stres, kecemasan, dan depresi yang ampuh. Carilah cara-cara kecil untuk menambah aktivitas olahraga, seperti naik tangga, atau jalan kaki ke tempat yang dekat. Untuk mendapatkan manfaat maksimal, lakukan olahraga setidaknya 30 menit setiap hari, dan coba melakukannya di luar ruangan. Paparan sinar matahari juga membantu tubuh menghasilkan vitamin D, yang meningkatkan tingkat serotonin di otak.
+            \n \n
+            5. Makanlah Makanan yang Enak\n
+            Selain memberikan nutrisi yang dibutuhkan, makan lezat dan sehat juga menyehatkan otak. Karbohidrat (dalam jumlah sedang) meningkatkan serotonin, bahan kimia yang terbukti memiliki efek menenangkan pada suasana hati. Sementara itu makanan kaya protein membantu kamu tetap waspada.
+            \n
+            Sayuran dan buah-buahan dipenuhi dengan nutrisi yang memberi makan setiap sel tubuh, termasuk yang mempengaruhi bahan kimia otak yang mengatur suasana hati. Sertakan makanan dengan asam lemak tak jenuh ganda Omega-3 (ditemukan dalam ikan, kacang-kacangan, dan biji rami). Nutrisi ini dapat meningkatkan suasana hati dan mengembalikan integritas struktural pada sel-sel otak yang diperlukan untuk fungsi kognitif.
+            \n \n
+            6. Terbukalah pada Seseorang\n
+            Mengetahui bahwa kamu dihargai oleh orang lain adalah penting untuk membantu kamu berpikir lebih positif. Belajar terbuka kepada orang lain, yang membuat kamu lebih mampu berpikir positif dan semakin mengenal diri sendiri.
+            \n \n
+
+            7. Lakukan Sesuatu untuk Orang Lain\n
+            Penelitian menunjukkan bahwa membantu orang lain memiliki efek menguntungkan pada perasaan kamu tentang diri sendiri. Bersikap membantu dan ramah adalah cara yang baik untuk membangun harga diri. Makna yang ditemukan dalam membantu orang lain memperkaya dan memperluas hidupmu.
+            \n \n
+            8. Istirahat\n
+            Pada saat-saat semua pekerjaan terasa seperti terlalu banyak, menjauhlah, dan lakukan apa pun kecuali hal yang membuat kamu semakin stres, setidaknya sampai kamu merasa sedikit lebih baik. Terkadang hal terbaik untuk dilakukan adalah latihan pernapasan sederhana: Tutup mata dan ambil 10 tarikan napas dalam-dalam. Untuk masing-masing tarikan napas, hitung sampai empat saat menarik napas, tahan selama empat hitungan, dan buang napas untuk empat hitungan. Hal ini bekerja baik untuk membantu kamu melawan stres.
+            \n \n
+            9. Tidur Tepat Waktu\n
+            Sejumlah besar penelitian menunjukkan bahwa kurang tidur memiliki efek negatif yang signifikan pada suasana hati. Coba tidur pada waktu yang teratur setiap hari. Hindari bermain gadget sebelum waktu tidur dan membatasi minuman berkafein untuk pagi hari.
+            \n \n
+
+            Jadi mulai sekarang, kamu memiliki berbagai cara langkah-langkah positif sederhana untuk menjaga kesehatan mental kamu. Cara menjaga kesehatan mental seperti yang disebutkan diatas tidaklah sulit dilakukan, kamu hanya memerlukan menerapkannya secara bertahap dan penuh ketelatenan dalam menerapkannya supaya mendapatkan manfaat jangka panjang.
+        </item>
     </string-array>
 
     <string-array name="gambarArtikel">
-        <item>@drawable/stressno1</item>
-        <item>@drawable/mental_health</item>
-        <item>@drawable/music_dragonimages</item>
+        
+        <item>@drawable/freepikmentalhealth</item>
+        <item>@drawable/freepikmusik</item>
+        <item>@drawable/ptsd</item>
+        <item>@drawable/supportcolleague</item>
+        <item>@drawable/hopeless_man</item>
     </string-array>
 
 
