@@ -46,7 +46,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     User u;
     List<Message> messages;
     ActivityGroupSharingBinding binding;
-    public String userDname,userAnonim;
+    public String userDname, userAnonim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +111,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
         DatabaseReference ref = firebaseDatabase.getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
         String userKey = user.getUid();
-        userAnonim = "Anon-"+userKey.substring(0,7)+"***";
+        userAnonim = "Anon-" + userKey.substring(0, 7) + "***";
         ref.child("Users").child(userKey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -213,7 +213,7 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
         binding.rvMessage.setLayoutManager(linearLayoutManager);
         adapter = new MessageAdapter(GroupSharingActivity.this, messages, reference);
         binding.rvMessage.setAdapter(adapter);
-        binding.rvMessage.scrollToPosition(adapter.getItemCount()-1);
+        binding.rvMessage.scrollToPosition(adapter.getItemCount() - 1);
 
         binding.rvMessage.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override

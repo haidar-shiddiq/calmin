@@ -12,4 +12,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loading_name">loading name...</string>
+    <string name="about">Aplikasi Calm.in ini adalah project Capstone
+        untuk program Merdeka Belajar Kampus Merdeka Studi Independen Bersertifikat di Dicoding.
+        Aplikasi ini bertemakan tentang kesehatan mental, dan mempunyai beberapa fitur yang bertujuan
+        sebagai stress-reliever. </string>
 </resources>

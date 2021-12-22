@@ -40,6 +40,10 @@
         <item name="android:statusBarColor">#52ADA2</item>
     </style>
 
+    <style name="artikelColor" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:statusBarColor">#222222</item>
+    </style>
+
     <style name="CounterOverFlow" parent="TextAppearance.Design.Counter.Overflow">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/teal_200</item>

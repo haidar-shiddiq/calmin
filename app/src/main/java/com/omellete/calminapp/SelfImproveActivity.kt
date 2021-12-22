@@ -1,6 +1,10 @@
 package com.omellete.calminapp
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +18,10 @@ class SelfImproveActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_self_improve)
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+        setTitle("Kembangkan Diri")
         rvArtikel = findViewById(R.id.rv_artikel)
         rvArtikel.setHasFixedSize(true)
         list.addAll(listData)
@@ -47,5 +55,15 @@ class SelfImproveActivity : AppCompatActivity() {
         val listIdolAdapter = ListArtikelAdapter(list)
         rvArtikel.adapter = listIdolAdapter
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
