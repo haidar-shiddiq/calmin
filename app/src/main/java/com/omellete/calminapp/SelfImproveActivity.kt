@@ -22,6 +22,7 @@ class SelfImproveActivity : AppCompatActivity() {
         actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         setTitle("Kembangkan Diri")
+        supportActionBar?.elevation= 0F
         rvArtikel = findViewById(R.id.rv_artikel)
         rvArtikel.setHasFixedSize(true)
         list.addAll(listData)

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.omellete.calminapp.R
@@ -16,6 +17,9 @@ class DetailArtikelActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_artikel)
+        val actionBar: ActionBar?
+        actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         val artikelGambar: ImageView = findViewById(R.id.img_item_photo)
         val tvArtikelJudul: TextView = findViewById(R.id.tv_judul_artikel)
@@ -24,7 +28,8 @@ class DetailArtikelActivity : AppCompatActivity() {
         val tvArtikelIsiArtikel: TextView = findViewById(R.id.tv_isi_artikel)
 
         val artikel = intent.getParcelableExtra<Artikel>(EXTRA_PERSON) as Artikel
-        val artikelNameFinal = "@${artikel.judul}"
+        val artikelNameFinal = "${artikel.judul}"
+        setTitle("${artikel.judul}")
         tvArtikelPenulis.text =artikel.penulis
         Glide.with(this)
             .load(artikel.gambar)

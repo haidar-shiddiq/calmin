@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalminApp</string>
+    <string name="app_name">Calm.in</string>
     <string name="email">Input email</string>
     <string name="password">Input Password</string>
     <string name="login">Log In</string>
