@@ -7,7 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class Artikel(
     var judul: String,
     var penulis: String,
-    var sumber:String,
+    var sumber: String,
     var gambar: Int,
-    var isiartikel : String,
-):Parcelable
+    var isiartikel: String,
+) : Parcelable

@@ -21,15 +21,15 @@ import java.util.ArrayList;
 
 public class MusicAdapter extends BaseAdapter {
 
-    private Context context;
-    private int layout;
-    private ArrayList<Music> arrayList;
-    private MediaPlayer mediaPlayer;
-    private Boolean flag = true;
-    String song,singer;
+    private final Context context;
+    private final int layout;
+    private final ArrayList<Music> arrayList;
+    String song, singer;
     MusicAdapter adapter;
     Dialog dialog;
     Handler mHandler;
+    private MediaPlayer mediaPlayer;
+    private Boolean flag = true;
 
     public MusicAdapter(Context context, int layout, ArrayList<Music> arrayList) {
         this.context = context;
@@ -57,11 +57,6 @@ public class MusicAdapter extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         return 0;
-    }
-
-    private class ViewHolder {
-        TextView txtName, txtSinger;
-        ImageView ivPlay, ivStop, imgBg, ivMusic;
     }
 
     @Override
@@ -108,7 +103,7 @@ public class MusicAdapter extends BaseAdapter {
                     mediaPlayer.setLooping(true);
                     song = music.getName();
                     singer = music.getSinger();
-                    alertPlaying(song,singer);
+                    alertPlaying(song, singer);
                     flag = false;
                 } else {
                     mediaPlayer.stop();
@@ -117,7 +112,7 @@ public class MusicAdapter extends BaseAdapter {
                     mediaPlayer.setLooping(true);
                     song = music.getName();
                     singer = music.getSinger();
-                    alertPlaying(song,singer);
+                    alertPlaying(song, singer);
                     flag = false;
                 }
             }
@@ -152,6 +147,11 @@ public class MusicAdapter extends BaseAdapter {
             public void run() {
                 dialog.dismiss();
             }
-        },10000L);
+        }, 10000L);
+    }
+
+    private class ViewHolder {
+        TextView txtName, txtSinger;
+        ImageView ivPlay, ivStop, imgBg, ivMusic;
     }
 }

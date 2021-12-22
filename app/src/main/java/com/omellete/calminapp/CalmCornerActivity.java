@@ -1,19 +1,17 @@
 package com.omellete.calminapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.omellete.calminapp.adapter.MusicAdapter;
 import com.omellete.calminapp.model.Music;
@@ -22,11 +20,11 @@ import java.util.ArrayList;
 
 public class CalmCornerActivity extends AppCompatActivity {
 
+    Dialog dialog;
+    Handler mHandler;
     private ArrayList<Music> arrayList;
     private MusicAdapter adapter;
     private ListView songList;
-    Dialog dialog;
-    Handler mHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +44,11 @@ public class CalmCornerActivity extends AppCompatActivity {
 
         songList = findViewById(R.id.songList);
         arrayList = new ArrayList<>();
-        arrayList.add(new Music("Heavy Rain","Mixkit",R.raw.heavy_rain,R.drawable.bg_thunder,R.drawable.ic_moon));
-        arrayList.add(new Music("Raining","Mixkit",R.raw.mixkit_rain,R.drawable.bg_rain,R.drawable.ic_moon));
-        arrayList.add(new Music("Forest Ambience","Mixkit",R.raw.mixkit_forest,R.drawable.bg_forest,R.drawable.ic_moon));
-        arrayList.add(new Music("Night Forest Ambience","Mixkit",R.raw.night_forest,R.drawable.bg_forest_night,R.drawable.ic_moon));
-        arrayList.add(new Music("Subway Crowd","Mixkit",R.raw.crowd_subway,R.drawable.bg_subway,R.drawable.ic_moon));
+        arrayList.add(new Music("Heavy Rain", "Mixkit", R.raw.heavy_rain, R.drawable.bg_thunder, R.drawable.ic_moon));
+        arrayList.add(new Music("Raining", "Mixkit", R.raw.mixkit_rain, R.drawable.bg_rain, R.drawable.ic_moon));
+        arrayList.add(new Music("Forest Ambience", "Mixkit", R.raw.mixkit_forest, R.drawable.bg_forest, R.drawable.ic_moon));
+        arrayList.add(new Music("Night Forest Ambience", "Mixkit", R.raw.night_forest, R.drawable.bg_forest_night, R.drawable.ic_moon));
+        arrayList.add(new Music("Subway Crowd", "Mixkit", R.raw.crowd_subway, R.drawable.bg_subway, R.drawable.ic_moon));
 
         adapter = new MusicAdapter(this, R.layout.item_music, arrayList);
         songList.setAdapter(adapter);
@@ -76,7 +74,7 @@ public class CalmCornerActivity extends AppCompatActivity {
             public void run() {
                 dialog.dismiss();
             }
-        },5000L);
+        }, 5000L);
     }
 
     @Override

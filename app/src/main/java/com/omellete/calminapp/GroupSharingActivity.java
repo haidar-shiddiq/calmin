@@ -39,6 +39,7 @@ import java.util.List;
 
 public class GroupSharingActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public String userDname, userAnonim;
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference reference;
@@ -46,7 +47,6 @@ public class GroupSharingActivity extends AppCompatActivity implements View.OnCl
     User u;
     List<Message> messages;
     ActivityGroupSharingBinding binding;
-    public String userDname, userAnonim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

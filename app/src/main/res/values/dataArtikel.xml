@@ -24,7 +24,7 @@
         <item>Viva Health</item>
         <item>Kompas.com</item>
         <item>Halodoc</item>
-        <item>Harvard Bussiness Review</item>
+        <item>Harvard Business Review</item>
         <item>Halodoc</item>
     </string-array>
 
@@ -240,7 +240,7 @@
     </string-array>
 
     <string-array name="gambarArtikel">
-        
+
         <item>@drawable/freepikmentalhealth</item>
         <item>@drawable/freepikmusik</item>
         <item>@drawable/ptsd</item>

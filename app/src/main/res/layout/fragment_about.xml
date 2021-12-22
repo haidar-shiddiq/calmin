@@ -42,9 +42,9 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="0.4"
         android:text="Calm.in App Version 1.0.0"
         android:textColor="#2C2C2C"
-        android:alpha="0.4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView19" />
@@ -56,10 +56,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:textSize="18sp"
         android:text="@string/about"
-        android:textColor="#CC2C2C2C"
         android:textAlignment="center"
+        android:textColor="#CC2C2C2C"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -69,11 +69,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="2021. CalminApp Team"
-        android:textColor="#2C2C2C"
         android:alpha="0.3"
+        android:text="2021. CSD-141 CalminApp Team"
+        android:textColor="#2C2C2C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonGithub"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg_red"
+        android:backgroundTint="#2C3D63"
+        android:drawableLeft="@drawable/ic_github"
+        android:padding="5dp"
+        android:text=" Github Kami "
+        android:textColor="#CCFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,5 @@
 package com.omellete.calminapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,6 +7,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.omellete.calminapp.databinding.ActivitySupportBinding;
 
@@ -35,7 +35,7 @@ public class SupportActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent mailIntent = new Intent(Intent.ACTION_VIEW);
-                Uri data = Uri.parse("mailto:?subject=" + "Permintaan Support Calm.in"+ "&body=" + "" + "&to=" + "cs.calmin@gmail.com");
+                Uri data = Uri.parse("mailto:?subject=" + "Permintaan Support Calm.in" + "&body=" + "" + "&to=" + "cs.calmin@gmail.com");
                 mailIntent.setData(data);
                 startActivity(Intent.createChooser(mailIntent, "Send mail..."));
             }
@@ -45,7 +45,7 @@ public class SupportActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent mailIntent = new Intent(Intent.ACTION_VIEW);
-                Uri data = Uri.parse("mailto:?subject=" + "Masukan untuk Calm.in"+ "&body=" + "" + "&to=" + "cs.calmin@gmail.com");
+                Uri data = Uri.parse("mailto:?subject=" + "Masukan untuk Calm.in" + "&body=" + "" + "&to=" + "cs.calmin@gmail.com");
                 mailIntent.setData(data);
                 startActivity(Intent.createChooser(mailIntent, "Send mail..."));
             }

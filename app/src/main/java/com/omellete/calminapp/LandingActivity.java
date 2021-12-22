@@ -1,10 +1,5 @@
 package com.omellete.calminapp;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,6 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.omellete.calminapp.fragment.AboutFragment;
@@ -26,11 +26,11 @@ import java.util.List;
 
 public class LandingActivity extends AppCompatActivity {
 
+    public static Fragment fragment;
     SNavigationDrawer sNavigationDrawer;
     Class fragmentClass;
-    public static Fragment fragment;
     FirebaseAuth firebaseAuth;
-    Dialog dialog,dialogE;
+    Dialog dialog, dialogE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +51,12 @@ public class LandingActivity extends AppCompatActivity {
 
         menuItems.add(new MenuItem("Menu", R.color.greenTheme));
         menuItems.add(new MenuItem("Tentang", R.color.greenTheme));
-        menuItems.add(new MenuItem("Logout",R.color.greenTheme));
+        menuItems.add(new MenuItem("Logout", R.color.greenTheme));
 
         //then add them to navigation drawer
 
         sNavigationDrawer.setMenuItemList(menuItems);
-        fragmentClass =  MenuFragment.class;
+        fragmentClass = MenuFragment.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
@@ -68,24 +68,23 @@ public class LandingActivity extends AppCompatActivity {
         }
 
 
-
         //Listener to handle the menu item click. It returns the position of the menu item clicked. Based on that you can switch between the fragments.
 
         sNavigationDrawer.setOnMenuItemClickListener(new SNavigationDrawer.OnMenuItemClickListener() {
             @Override
             public void onMenuItemClicked(int position) {
-                System.out.println("Position "+position);
+                System.out.println("Position " + position);
 
-                switch (position){
-                    case 0:{
+                switch (position) {
+                    case 0: {
                         fragmentClass = MenuFragment.class;
                         break;
                     }
-                    case 1:{
+                    case 1: {
                         fragmentClass = AboutFragment.class;
                         break;
                     }
-                    case 2:{
+                    case 2: {
                         logoutDialog();
                         break;
                     }
@@ -101,12 +100,12 @@ public class LandingActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onDrawerOpening(){
+                    public void onDrawerOpening() {
 
                     }
 
                     @Override
-                    public void onDrawerClosing(){
+                    public void onDrawerClosing() {
                         System.out.println("Drawer closed");
 
                         try {
@@ -129,7 +128,7 @@ public class LandingActivity extends AppCompatActivity {
 
                     @Override
                     public void onDrawerStateChanged(int newState) {
-                        System.out.println("State "+newState);
+                        System.out.println("State " + newState);
                     }
                 });
             }
@@ -139,7 +138,7 @@ public class LandingActivity extends AppCompatActivity {
 
     public void composeEmail() {
         Intent mailIntent = new Intent(Intent.ACTION_VIEW);
-        Uri data = Uri.parse("mailto:?subject=" + "Calm.in Support Request"+ "&body=" + "" + "&to=" + "cs.calmin@gmmail.com");
+        Uri data = Uri.parse("mailto:?subject=" + "Calm.in Support Request" + "&body=" + "" + "&to=" + "cs.calmin@gmmail.com");
         mailIntent.setData(data);
         startActivity(Intent.createChooser(mailIntent, "Send mail..."));
     }
@@ -165,7 +164,7 @@ public class LandingActivity extends AppCompatActivity {
                 dialog.dismiss();
                 firebaseAuth.signOut();
                 finish();
-                startActivity(new Intent(LandingActivity.this,LoginActivity.class));
+                startActivity(new Intent(LandingActivity.this, LoginActivity.class));
             }
         });
     }

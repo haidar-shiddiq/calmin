@@ -9,23 +9,26 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.omellete.calminapp.R
 import com.omellete.calminapp.DetailArtikelActivity
+import com.omellete.calminapp.R
 import com.omellete.calminapp.model.Artikel
 
-class ListArtikelAdapter (private val listArtikel: ArrayList<Artikel>) : RecyclerView.Adapter<ListArtikelAdapter.ListViewHolder>() {
+class ListArtikelAdapter(private val listArtikel: ArrayList<Artikel>) :
+    RecyclerView.Adapter<ListArtikelAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
+
     interface OnItemClickCallback {
         fun onItemClicked(data: Artikel)
 
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ListViewHolder {
-        val view : View = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_row_artikel, viewGroup, false)
+        val view: View = LayoutInflater.from(viewGroup.context)
+            .inflate(R.layout.item_row_artikel, viewGroup, false)
         return ListViewHolder(view)
     }
 
@@ -33,7 +36,7 @@ class ListArtikelAdapter (private val listArtikel: ArrayList<Artikel>) : Recycle
 
         Glide.with(holder.itemView.context)
             .load(listArtikel[position].gambar)
-            .apply(RequestOptions().override(55,55))
+            .apply(RequestOptions().override(55, 55))
             .into(holder.gambarBerita)
         holder.tvJudulArtikel.text = listArtikel[position].judul
         holder.tvPenulisArtikel.text = listArtikel[position].penulis
@@ -48,11 +51,12 @@ class ListArtikelAdapter (private val listArtikel: ArrayList<Artikel>) : Recycle
     }
 
     override fun getItemCount(): Int {
-        return  listArtikel.size
+        return listArtikel.size
     }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvJudulArtikel: TextView = itemView.findViewById(R.id.tv_judul_artikel)
         var tvPenulisArtikel: TextView = itemView.findViewById(R.id.tv_penulis_artikel)
-        var gambarBerita : ImageView = itemView.findViewById(R.id.img_item_photo)
+        var gambarBerita: ImageView = itemView.findViewById(R.id.img_item_photo)
     }
 }

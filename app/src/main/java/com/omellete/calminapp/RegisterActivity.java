@@ -1,16 +1,15 @@
 package com.omellete.calminapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.Window;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -41,10 +40,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        binding.btnLoginn.setOnClickListener(new View.OnClickListener(){
+        binding.btnLoginn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
 
@@ -60,29 +59,29 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = binding.password.getEditText().getText().toString();
                 String confirmPw = binding.confirmPassword.getEditText().getText().toString();
 
-                if (TextUtils.isEmpty(username)||TextUtils.isEmpty(email)||TextUtils.isEmpty(password)
-                        ||TextUtils.isEmpty(confirmPw)){
+                if (TextUtils.isEmpty(username) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password)
+                        || TextUtils.isEmpty(confirmPw)) {
                     Toast.makeText(RegisterActivity.this, "Mohon isi semua field", Toast.LENGTH_SHORT).show();
                     pd.dismiss();
-                }else if(password.length()<6){
+                } else if (password.length() < 6) {
                     Toast.makeText(RegisterActivity.this, "Password minimal terdiri dari 6 karakter", Toast.LENGTH_SHORT).show();
                     pd.dismiss();
-                }else if(!password.equals(confirmPw)){
+                } else if (!password.equals(confirmPw)) {
                     Toast.makeText(RegisterActivity.this, "Konfirmasi password dengan benar", Toast.LENGTH_SHORT).show();
                     pd.dismiss();
-                }else{
-                    register(username,email,password);
+                } else {
+                    register(username, email, password);
                 }
             }
         });
     }
 
-    private void register(String username, String email, String password){
+    private void register(String username, String email, String password) {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful ()) {
+                        if (task.isSuccessful()) {
                             FirebaseUser firebaseUser = auth.getCurrentUser();
                             String userid = firebaseUser.getUid();
                             User u = new User();
@@ -99,15 +98,15 @@ public class RegisterActivity extends AppCompatActivity {
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()){
+                                    if (task.isSuccessful()) {
                                         pd.dismiss();
                                         Intent intent = new Intent(RegisterActivity.this, LandingActivity.class);
-                                        intent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent. FLAG_ACTIVITY_NEW_TASK) ;
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                     }
                                 }
                             });
-                        }else{
+                        } else {
                             pd.dismiss();
                             Toast.makeText(RegisterActivity.this, "Maaf, kamu tidak bisa register dengan username atau email ini", Toast.LENGTH_SHORT).show();
                         }

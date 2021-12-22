@@ -1,19 +1,19 @@
 package com.omellete.calminapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.omellete.calminapp.R
 import com.omellete.calminapp.model.Artikel
 
 class DetailArtikelActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_PERSON: String = "extra_person"
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_artikel)
@@ -29,8 +29,8 @@ class DetailArtikelActivity : AppCompatActivity() {
 
         val artikel = intent.getParcelableExtra<Artikel>(EXTRA_PERSON) as Artikel
         val artikelNameFinal = "${artikel.judul}"
-        setTitle("${artikel.judul}")
-        tvArtikelPenulis.text =artikel.penulis
+        title = "${artikel.judul}"
+        tvArtikelPenulis.text = artikel.penulis
         Glide.with(this)
             .load(artikel.gambar)
             .apply(RequestOptions())
@@ -42,6 +42,7 @@ class DetailArtikelActivity : AppCompatActivity() {
 
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

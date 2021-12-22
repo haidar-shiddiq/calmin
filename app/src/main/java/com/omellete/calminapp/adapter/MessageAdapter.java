@@ -1,7 +1,6 @@
 package com.omellete.calminapp.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +25,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     List<Message> messages;
     DatabaseReference reference;
 
-    public MessageAdapter(Context context, List<Message> messages, DatabaseReference reference){
+    public MessageAdapter(Context context, List<Message> messages, DatabaseReference reference) {
         this.context = context;
         this.messages = messages;
         this.reference = reference;
@@ -35,7 +34,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     @NonNull
     @Override
     public MessageAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_message,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_message, parent, false);
         return new MessageAdapterViewHolder(view);
     }
 
@@ -43,14 +42,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
     public void onBindViewHolder(@NonNull MessageAdapterViewHolder holder, int position) {
         Message message = messages.get(position);
 
-        if (message.getName().equals(AllMethods.name)){
+        if (message.getName().equals(AllMethods.name)) {
             holder.sender.setText("You");
             holder.tvTittle.setText(message.getMessage());
             holder.tvTittle.setGravity(Gravity.START);
             holder.sender.setTextColor(context.getResources().getColorStateList(R.color.myChatTextName));
             holder.tvTittle.setTextColor(context.getResources().getColorStateList(R.color.myChatText));
             holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChat));
-        }else if(message.getName().equals("Anon-SuyI5zL***")){
+        } else if (message.getName().equals("Anon-SuyI5zL***")) {
             holder.sender.setText("Admin");
             holder.tvTittle.setText(message.getMessage());
             holder.tvTittle.setGravity(Gravity.START);
@@ -58,8 +57,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
             holder.tvTittle.setTextColor(context.getResources().getColorStateList(R.color.myChatText));
             holder.cardView.setBackgroundTintList(context.getResources().getColorStateList(R.color.myChatTextNameAdmin));
             holder.ibDelete.setVisibility(View.GONE);
-        }
-        else{
+        } else {
             holder.sender.setText(message.getName());
             holder.tvTittle.setText(message.getMessage());
             holder.ibDelete.setVisibility(View.GONE);
@@ -72,8 +70,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageA
         return messages.size();
     }
 
-    public class MessageAdapterViewHolder extends RecyclerView.ViewHolder{
-        TextView tvTittle,sender;
+    public class MessageAdapterViewHolder extends RecyclerView.ViewHolder {
+        TextView tvTittle, sender;
         ImageButton ibDelete;
         CardView cardView;
 
