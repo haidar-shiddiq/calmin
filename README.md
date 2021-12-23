@@ -16,6 +16,8 @@ Library :
 
 - Glide (https://github.com/bumptech/glide)
 
+- Circle Image (https://github.com/hdodenhof/CircleImageView)
+
 
 Other Resources :
 
