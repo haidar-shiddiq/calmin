@@ -1,14 +1,16 @@
 # calmin
 Capstone Project SIB Dicoding 2021
 
-Logo Font :
+## **Atribution**
+
+**Logo Font :**
 
 - Mightype Script(free for personal and commercial use)
 
 - Open Sans(free for personal and commercial use)
 
 
-Library :
+**Library :**
 
 - PaperOnboarding (https://github.com/Ramotion/paper-onboarding-android)
 
@@ -19,7 +21,7 @@ Library :
 - Circle Image (https://github.com/hdodenhof/CircleImageView)
 
 
-Other Resources :
+**Other Resources :**
 
 - raining background (personal and commercial) https://www.freepik.com/photos/pattern%27%3EPattern photo created by Kireyonok_Yuliya - www.freepik.com
 
@@ -54,6 +56,5 @@ Other Resources :
 - Depression concept illustration <a href="https://www.freepik.com/vectors/people">People vector created by stories - www.freepik.com</a>
 
 - Hopeless man <a href="https://www.freepik.com/photos/people">People photo created by pressfoto - www.freepik.com</a>
-
 
 - open source icon from remixicon.com https://remixicon.com/
