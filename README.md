@@ -1,19 +1,15 @@
-# calmin
+# Calm.in
 Capstone Project SIB Dicoding 2021
 
 ## **App Preview**
 ![calmin preview](https://user-images.githubusercontent.com/68340990/147316296-535c6a2f-0e8e-454f-87ca-9581e07af668.png)
 
-## **Atribution**
+## **Features**
+- Ruang Cakap (Space to share stories)
+- Zona Tenang (Music Corner)
+- Kembangkan Diri (Articles)
 
-**Logo Font :**
-
-- Mightype Script(free for personal and commercial use)
-
-- Open Sans(free for personal and commercial use)
-
-
-**Library :**
+## **Library**
 
 - PaperOnboarding (https://github.com/Ramotion/paper-onboarding-android)
 
@@ -22,6 +18,15 @@ Capstone Project SIB Dicoding 2021
 - Glide (https://github.com/bumptech/glide)
 
 - Circle Image (https://github.com/hdodenhof/CircleImageView)
+
+
+## **Atribution**
+
+**Logo Font :**
+
+- Mightype Script(free for personal and commercial use)
+
+- Open Sans(free for personal and commercial use)
 
 
 **Other Resources :**
