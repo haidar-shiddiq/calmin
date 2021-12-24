@@ -1,6 +1,9 @@
 # calmin
 Capstone Project SIB Dicoding 2021
 
+## **App Preview**
+![calmin preview](https://user-images.githubusercontent.com/68340990/147316296-535c6a2f-0e8e-454f-87ca-9581e07af668.png)
+
 ## **Atribution**
 
 **Logo Font :**
